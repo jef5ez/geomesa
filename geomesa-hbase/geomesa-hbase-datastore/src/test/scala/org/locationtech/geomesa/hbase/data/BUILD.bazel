@@ -1,0 +1,56 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "data",
+    srcs = [
+        "//geomesa-hbase/geomesa-hbase-datastore/src/test/scala/org/locationtech/geomesa/hbase/data:sources"
+    ],
+    deps = [
+        "//geomesa-hbase/geomesa-hbase-datastore/src/main/scala/org/locationtech/geomesa/hbase/coprocessor:coprocessor" , 
+        "//geomesa-hbase/geomesa-hbase-datastore/src/main/scala/org/locationtech/geomesa/hbase/data:data" , 
+        "//geomesa-hbase/geomesa-hbase-datastore/src/main/scala/org/locationtech/geomesa/hbase/filters:filters" , 
+        "//geomesa-hbase/geomesa-hbase-datastore/src/main/scala/org/locationtech/geomesa/hbase:hbase" , 
+        "//geomesa-hbase/geomesa-hbase-datastore/src/test/scala/org/locationtech/geomesa/hbase/data:data" , 
+        "//geomesa-hbase/geomesa-hbase-datastore:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "data_test_discovery",
+    tests_from = [":data"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+
+java_library(
+    name = "data",
+    srcs = [
+        "//geomesa-hbase/geomesa-hbase-datastore/src/test/scala/org/locationtech/geomesa/hbase/data:sources"
+    ],
+    deps = [
+        "//geomesa-hbase/geomesa-hbase-datastore:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "data_test_discovery",
+    tests_from = [":data"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

@@ -1,0 +1,35 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "audit",
+    srcs = [
+        "//geomesa-utils/src/main/java/org/locationtech/geomesa/utils/audit:sources"
+    ],
+    deps = [
+        "//geomesa-utils/src/main/java/org/locationtech/geomesa/utils/audit:audit" , 
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/conf:conf" , 
+        "//geomesa-utils:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "audit",
+    srcs = [
+        "//geomesa-utils/src/main/java/org/locationtech/geomesa/utils/audit:sources"
+    ],
+    deps = [
+        "//geomesa-utils:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

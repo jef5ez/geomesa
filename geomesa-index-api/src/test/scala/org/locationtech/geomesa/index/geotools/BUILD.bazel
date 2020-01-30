@@ -1,0 +1,33 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "geotools",
+    srcs = [
+        "//geomesa-index-api/src/test/scala/org/locationtech/geomesa/index/geotools:sources"
+    ],
+    deps = [
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/geotools:geotools" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/planning:planning" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/process:process" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/stats:stats" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/utils:utils" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index:index" , 
+        "//geomesa-index-api/src/test/scala/org/locationtech/geomesa/index:index" , 
+        "//geomesa-index-api:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "geotools_test_discovery",
+    tests_from = [":geotools"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

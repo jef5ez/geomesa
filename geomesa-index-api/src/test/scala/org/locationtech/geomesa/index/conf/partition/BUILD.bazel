@@ -1,0 +1,29 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "partition",
+    srcs = [
+        "//geomesa-index-api/src/test/scala/org/locationtech/geomesa/index/conf/partition:sources"
+    ],
+    deps = [
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/conf/partition:partition" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/metadata:metadata" , 
+        "//geomesa-index-api/src/test/scala/org/locationtech/geomesa/index:index" , 
+        "//geomesa-index-api:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "partition_test_discovery",
+    tests_from = [":partition"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

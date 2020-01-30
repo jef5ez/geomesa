@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "curve",
+    srcs = [
+        "//geomesa-z3/src/test/scala/org/locationtech/geomesa/curve:sources"
+    ],
+    deps = [
+        "//geomesa-z3/src/main/scala/org/locationtech/geomesa/curve:curve" , 
+        "//geomesa-z3:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "curve_test_discovery",
+    tests_from = [":curve"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

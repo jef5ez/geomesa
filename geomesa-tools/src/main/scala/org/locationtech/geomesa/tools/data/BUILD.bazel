@@ -1,0 +1,19 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "data",
+    srcs = [
+        "//geomesa-tools/src/main/scala/org/locationtech/geomesa/tools/data:sources"
+    ],
+    deps = [
+        "//geomesa-tools/src/main/scala/org/locationtech/geomesa/tools/utils:utils" , 
+        "//geomesa-tools/src/main/scala/org/locationtech/geomesa/tools:tools" , 
+        "//geomesa-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

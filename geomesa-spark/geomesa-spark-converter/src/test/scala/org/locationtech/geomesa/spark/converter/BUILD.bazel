@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "converter",
+    srcs = [
+        "//geomesa-spark/geomesa-spark-converter/src/test/scala/org/locationtech/geomesa/spark/converter:sources"
+    ],
+    deps = [
+        "//geomesa-spark/geomesa-spark-converter/src/main/scala/org/locationtech/geomesa/spark/converter:converter" , 
+        "//geomesa-spark/geomesa-spark-converter:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "converter_test_discovery",
+    tests_from = [":converter"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

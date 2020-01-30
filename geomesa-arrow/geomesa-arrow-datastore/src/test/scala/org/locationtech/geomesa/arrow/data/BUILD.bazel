@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "data",
+    srcs = [
+        "//geomesa-arrow/geomesa-arrow-datastore/src/test/scala/org/locationtech/geomesa/arrow/data:sources"
+    ],
+    deps = [
+        "//geomesa-arrow/geomesa-arrow-datastore/src/main/scala/org/locationtech/geomesa/arrow/data:data" , 
+        "//geomesa-arrow/geomesa-arrow-datastore:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "data_test_discovery",
+    tests_from = [":data"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

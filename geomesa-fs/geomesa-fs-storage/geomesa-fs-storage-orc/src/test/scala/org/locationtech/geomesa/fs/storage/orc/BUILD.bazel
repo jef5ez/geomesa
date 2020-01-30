@@ -1,0 +1,53 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "orc",
+    srcs = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-orc/src/test/scala/org/locationtech/geomesa/fs/storage/orc:sources"
+    ],
+    deps = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-orc/src/main/scala/org/locationtech/geomesa/fs/storage/orc:orc" , 
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-orc/src/test/scala/org/locationtech/geomesa/fs/storage/orc:orc" , 
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-orc:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "orc_test_discovery",
+    tests_from = [":orc"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+
+java_library(
+    name = "orc",
+    srcs = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-orc/src/test/scala/org/locationtech/geomesa/fs/storage/orc:sources"
+    ],
+    deps = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-orc:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "orc_test_discovery",
+    tests_from = [":orc"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

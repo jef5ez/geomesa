@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "stats",
+    srcs = [
+        "//geomesa-kudu/geomesa-kudu-tools/src/main/scala/org/locationtech/geomesa/kudu/tools/stats:sources"
+    ],
+    deps = [
+        "//geomesa-kudu/geomesa-kudu-tools/src/main/scala/org/locationtech/geomesa/kudu/tools:tools" , 
+        "//geomesa-kudu/geomesa-kudu-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "stats",
+    srcs = [
+        "//geomesa-kudu/geomesa-kudu-tools/src/main/scala/org/locationtech/geomesa/kudu/tools/stats:sources"
+    ],
+    deps = [
+        "//geomesa-kudu/geomesa-kudu-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

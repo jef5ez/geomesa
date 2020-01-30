@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "bin",
+    srcs = [
+        "//geomesa-index-api/src/test/scala/org/locationtech/geomesa/index/utils/bin:sources"
+    ],
+    deps = [
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/utils/bin:bin" , 
+        "//geomesa-index-api:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "bin_test_discovery",
+    tests_from = [":bin"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

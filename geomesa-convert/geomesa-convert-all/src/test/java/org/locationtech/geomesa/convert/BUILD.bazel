@@ -1,0 +1,52 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "convert",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-all/src/test/java/org/locationtech/geomesa/convert:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-all/src/test/java/org/locationtech/geomesa/convert:convert" , 
+        "//geomesa-convert/geomesa-convert-all:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "convert_test_discovery",
+    tests_from = [":convert"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+
+java_library(
+    name = "convert",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-all/src/test/java/org/locationtech/geomesa/convert:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-all:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "convert_test_discovery",
+    tests_from = [":convert"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

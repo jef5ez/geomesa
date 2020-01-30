@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "converter",
+    srcs = [
+        "//geomesa-spark/geomesa-spark-converter/src/main/scala/org/locationtech/geomesa/spark/converter:sources"
+    ],
+    deps = [
+        "//geomesa-spark/geomesa-spark-converter:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

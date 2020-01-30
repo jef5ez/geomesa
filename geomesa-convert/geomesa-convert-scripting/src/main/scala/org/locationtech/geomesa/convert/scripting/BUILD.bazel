@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "scripting",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-scripting/src/main/scala/org/locationtech/geomesa/convert/scripting:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-scripting:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

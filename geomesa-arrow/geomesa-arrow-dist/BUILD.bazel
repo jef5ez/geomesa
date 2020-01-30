@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-arrow/geomesa-arrow-datastore:main_dependencies",
+        "//geomesa-arrow/geomesa-arrow-gs-plugin:main_dependencies",
+        "//geomesa-arrow/geomesa-arrow-tools:main_dependencies",
+        "//geomesa-features/geomesa-feature-all:main_dependencies",
+        "//geomesa-process/geomesa-process-wps:main_dependencies",
+        "//geomesa-tools:main_dependencies",
+        "//geomesa-utils:main_dependencies",
+        "@com_clearspring_analytics_stream",
+        "@log4j_log4j//:linkable",
+        "@org_geotools_gt_opengis",
+        "@org_scala_lang_modules_scala_xml_2_11",
+        "@org_scala_lang_scala_compiler",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_log4j12//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

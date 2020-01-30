@@ -1,0 +1,36 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "data",
+    srcs = [
+        "//geomesa-lambda/geomesa-lambda-datastore/src/main/scala/org/locationtech/geomesa/lambda/data:sources"
+    ],
+    deps = [
+        "//geomesa-lambda/geomesa-lambda-datastore/src/main/scala/org/locationtech/geomesa/lambda/data:data" , 
+        "//geomesa-lambda/geomesa-lambda-datastore/src/main/scala/org/locationtech/geomesa/lambda/stream/kafka:kafka" , 
+        "//geomesa-lambda/geomesa-lambda-datastore/src/main/scala/org/locationtech/geomesa/lambda/stream:stream" , 
+        "//geomesa-lambda/geomesa-lambda-datastore:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "data",
+    srcs = [
+        "//geomesa-lambda/geomesa-lambda-datastore/src/main/scala/org/locationtech/geomesa/lambda/data:sources"
+    ],
+    deps = [
+        "//geomesa-lambda/geomesa-lambda-datastore:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

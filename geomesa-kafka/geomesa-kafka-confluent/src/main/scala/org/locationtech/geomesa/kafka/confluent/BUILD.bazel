@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "confluent",
+    srcs = [
+        "//geomesa-kafka/geomesa-kafka-confluent/src/main/scala/org/locationtech/geomesa/kafka/confluent:sources"
+    ],
+    deps = [
+        "//geomesa-kafka/geomesa-kafka-confluent/src/main/scala/org/locationtech/geomesa/kafka/confluent:confluent" , 
+        "//geomesa-kafka/geomesa-kafka-confluent:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "confluent",
+    srcs = [
+        "//geomesa-kafka/geomesa-kafka-confluent/src/main/scala/org/locationtech/geomesa/kafka/confluent:sources"
+    ],
+    deps = [
+        "//geomesa-kafka/geomesa-kafka-confluent:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

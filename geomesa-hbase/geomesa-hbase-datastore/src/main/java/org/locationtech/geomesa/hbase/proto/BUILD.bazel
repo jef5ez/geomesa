@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "proto",
+    srcs = [
+        "//geomesa-hbase/geomesa-hbase-datastore/src/main/java/org/locationtech/geomesa/hbase/proto:sources"
+    ],
+    deps = [
+        "//geomesa-hbase/geomesa-hbase-datastore/src/main/java/org/locationtech/geomesa/hbase/proto:proto" , 
+        "//geomesa-hbase/geomesa-hbase-datastore:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "proto",
+    srcs = [
+        "//geomesa-hbase/geomesa-hbase-datastore/src/main/java/org/locationtech/geomesa/hbase/proto:sources"
+    ],
+    deps = [
+        "//geomesa-hbase/geomesa-hbase-datastore:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

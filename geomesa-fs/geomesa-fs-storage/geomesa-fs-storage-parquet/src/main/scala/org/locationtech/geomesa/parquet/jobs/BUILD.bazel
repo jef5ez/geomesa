@@ -1,0 +1,36 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "jobs",
+    srcs = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-parquet/src/main/scala/org/locationtech/geomesa/parquet/jobs:sources"
+    ],
+    deps = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-parquet/src/main/scala/org/locationtech/geomesa/parquet/io:io" , 
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-parquet/src/main/scala/org/locationtech/geomesa/parquet/jobs:jobs" , 
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-parquet/src/main/scala/org/locationtech/geomesa/parquet:parquet" , 
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-parquet:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "jobs",
+    srcs = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-parquet/src/main/scala/org/locationtech/geomesa/parquet/jobs:sources"
+    ],
+    deps = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-parquet:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

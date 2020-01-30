@@ -1,0 +1,40 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-accumulo/geomesa-accumulo-datastore:main_dependencies",
+        "//geomesa-accumulo/geomesa-accumulo-distributed-runtime:main_dependencies",
+        "//geomesa-accumulo/geomesa-accumulo-gs-plugin:main_dependencies",
+        "//geomesa-accumulo/geomesa-accumulo-jobs:main_dependencies",
+        "//geomesa-accumulo/geomesa-accumulo-raster-distributed-runtime:main_dependencies",
+        "//geomesa-accumulo/geomesa-accumulo-raster:main_dependencies",
+        "//geomesa-accumulo/geomesa-accumulo-spark-runtime:main_dependencies",
+        "//geomesa-accumulo/geomesa-accumulo-tools:main_dependencies",
+        "//geomesa-blobstore/geomesa-blobstore-gs-plugin:main_dependencies",
+        "//geomesa-features/geomesa-feature-all:main_dependencies",
+        "//geomesa-geojson/geomesa-geojson-gs-plugin:main_dependencies",
+        "//geomesa-process/geomesa-process-wps:main_dependencies",
+        "//geomesa-spark/geomesa-spark-converter:main_dependencies",
+        "//geomesa-stream/geomesa-stream-gs-plugin:main_dependencies",
+        "//geomesa-tools:main_dependencies",
+        "//geomesa-utils:main_dependencies",
+        "//geomesa-web/geomesa-web-core:main_dependencies",
+        "//geomesa-web/geomesa-web-data:main_dependencies",
+        "@com_clearspring_analytics_stream",
+        "@log4j_log4j//:linkable",
+        "@org_apache_curator_curator_recipes",
+        "@org_geotools_gt_opengis",
+        "@org_json4s_json4s_native_2_11",
+        "@org_scala_lang_modules_scala_xml_2_11",
+        "@org_scala_lang_scala_compiler",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_log4j12//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

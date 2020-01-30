@@ -1,0 +1,18 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "consumer",
+    srcs = [
+        "//geomesa-kafka/geomesa-kafka-utils/src/main/scala/org/locationtech/geomesa/kafka/consumer:sources"
+    ],
+    deps = [
+        "//geomesa-kafka/geomesa-kafka-utils/src/main/scala/org/locationtech/geomesa/kafka:kafka" , 
+        "//geomesa-kafka/geomesa-kafka-utils:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

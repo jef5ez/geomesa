@@ -1,0 +1,20 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-cassandra/geomesa-cassandra-datastore:main_dependencies",
+        "//geomesa-cassandra/geomesa-cassandra-gs-plugin:main_dependencies",
+        "//geomesa-cassandra/geomesa-cassandra-tools:main_dependencies",
+        "//geomesa-process/geomesa-process-wps:main_dependencies",
+        "//geomesa-tools:main_dependencies",
+        "@org_geotools_gt_process",
+        "@org_scala_lang_scala_library//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

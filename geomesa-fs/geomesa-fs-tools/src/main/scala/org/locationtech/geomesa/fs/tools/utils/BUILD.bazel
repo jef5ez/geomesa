@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "utils",
+    srcs = [
+        "//geomesa-fs/geomesa-fs-tools/src/main/scala/org/locationtech/geomesa/fs/tools/utils:sources"
+    ],
+    deps = [
+        "//geomesa-fs/geomesa-fs-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

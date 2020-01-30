@@ -1,0 +1,38 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-convert/geomesa-convert-common:main_dependencies",
+        "@io_github_azagniotov_dropwizard_metrics_cloudwatch",
+        "@org_apache_httpcomponents_httpclient",
+        "@org_apache_httpcomponents_httpcore",
+        "@org_scala_lang_scala_library//:linkable"
+    ],
+    runtime_deps = [
+        "//geomesa-convert/geomesa-convert-metrics-cloudwatch/src/main/resources:resources"
+    ],
+)
+     
+
+
+java_library(
+    name = "tests_dependencies",
+    testonly = 1,
+    exports = [
+        "main_dependencies"
+    ],
+    runtime_deps = [
+        "@com_esotericsoftware_kryo_shaded//:linkable",
+        "@org_apache_avro_avro//:linkable",
+        "@org_apache_commons_commons_lang3//:linkable",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_api//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

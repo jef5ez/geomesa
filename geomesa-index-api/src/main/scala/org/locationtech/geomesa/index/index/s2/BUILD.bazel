@@ -1,0 +1,40 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "s2",
+    srcs = [
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/index/s2:sources"
+    ],
+    deps = [
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/api:api" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/conf:conf" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/geotools:geotools" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/index/s2:s2" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/index:index" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/strategies:strategies" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/utils:utils" , 
+        "//geomesa-index-api:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "s2",
+    srcs = [
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/index/s2:sources"
+    ],
+    deps = [
+        "//geomesa-index-api:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

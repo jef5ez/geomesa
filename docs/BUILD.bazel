@@ -1,0 +1,14 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "@org_scala_lang_scala_library//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

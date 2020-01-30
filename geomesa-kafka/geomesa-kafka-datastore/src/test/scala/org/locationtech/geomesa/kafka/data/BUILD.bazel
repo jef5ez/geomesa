@@ -1,0 +1,29 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "data",
+    srcs = [
+        "//geomesa-kafka/geomesa-kafka-datastore/src/test/scala/org/locationtech/geomesa/kafka/data:sources"
+    ],
+    deps = [
+        "//geomesa-kafka/geomesa-kafka-datastore/src/main/scala/org/locationtech/geomesa/kafka/data:data" , 
+        "//geomesa-kafka/geomesa-kafka-datastore/src/main/scala/org/locationtech/geomesa/kafka/utils:utils" , 
+        "//geomesa-kafka/geomesa-kafka-datastore/src/test/scala/org/locationtech/geomesa/kafka:kafka" , 
+        "//geomesa-kafka/geomesa-kafka-datastore:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "data_test_discovery",
+    tests_from = [":data"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

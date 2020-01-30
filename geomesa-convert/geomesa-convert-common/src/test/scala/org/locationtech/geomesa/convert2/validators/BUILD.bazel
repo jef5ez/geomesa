@@ -1,0 +1,29 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "validators",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-common/src/test/scala/org/locationtech/geomesa/convert2/validators:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-common/src/main/scala/org/locationtech/geomesa/convert2/metrics:metrics" , 
+        "//geomesa-convert/geomesa-convert-common/src/main/scala/org/locationtech/geomesa/convert2/validators:validators" , 
+        "//geomesa-convert/geomesa-convert-common/src/main/scala/org/locationtech/geomesa/convert:convert" , 
+        "//geomesa-convert/geomesa-convert-common:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "validators_test_discovery",
+    tests_from = [":validators"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

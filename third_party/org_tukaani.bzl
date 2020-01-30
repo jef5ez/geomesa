@@ -1,0 +1,9 @@
+load("//:import_external.bzl", import_external = "safe_exodus_maven_import_external")
+
+def dependencies():
+
+  import_external(
+      name = "org_tukaani_xz",
+      artifact = "org.tukaani:xz:1.5",
+      artifact_sha256 = "86f30fa8775fa3a62cdb39d1ed78a6019164c1058864048d42cbee244e26e840",
+  )

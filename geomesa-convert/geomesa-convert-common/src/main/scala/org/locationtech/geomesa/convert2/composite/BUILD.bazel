@@ -1,0 +1,37 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "composite",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-common/src/main/scala/org/locationtech/geomesa/convert2/composite:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-common/src/main/scala/org/locationtech/geomesa/convert2/composite:composite" , 
+        "//geomesa-convert/geomesa-convert-common/src/main/scala/org/locationtech/geomesa/convert2/transforms:transforms" , 
+        "//geomesa-convert/geomesa-convert-common/src/main/scala/org/locationtech/geomesa/convert2:convert2" , 
+        "//geomesa-convert/geomesa-convert-common/src/main/scala/org/locationtech/geomesa/convert:convert" , 
+        "//geomesa-convert/geomesa-convert-common:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "composite",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-common/src/main/scala/org/locationtech/geomesa/convert2/composite:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-common:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

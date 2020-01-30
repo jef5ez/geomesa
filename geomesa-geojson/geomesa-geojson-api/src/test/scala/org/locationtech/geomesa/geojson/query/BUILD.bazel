@@ -1,0 +1,28 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "query",
+    srcs = [
+        "//geomesa-geojson/geomesa-geojson-api/src/test/scala/org/locationtech/geomesa/geojson/query:sources"
+    ],
+    deps = [
+        "//geomesa-geojson/geomesa-geojson-api/src/main/scala/org/locationtech/geomesa/geojson/query:query" , 
+        "//geomesa-geojson/geomesa-geojson-api/src/main/scala/org/locationtech/geomesa/geojson:geojson" , 
+        "//geomesa-geojson/geomesa-geojson-api:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "query_test_discovery",
+    tests_from = [":query"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

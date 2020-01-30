@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "status",
+    srcs = [
+        "//geomesa-hbase/geomesa-hbase-tools/src/main/scala/org/locationtech/geomesa/hbase/tools/status:sources"
+    ],
+    deps = [
+        "//geomesa-hbase/geomesa-hbase-tools/src/main/scala/org/locationtech/geomesa/hbase/tools:tools" , 
+        "//geomesa-hbase/geomesa-hbase-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "status",
+    srcs = [
+        "//geomesa-hbase/geomesa-hbase-tools/src/main/scala/org/locationtech/geomesa/hbase/tools/status:sources"
+    ],
+    deps = [
+        "//geomesa-hbase/geomesa-hbase-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

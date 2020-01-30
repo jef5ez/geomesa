@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "datastore",
+    srcs = [
+        "//geomesa-stream/geomesa-stream-datastore/src/test/scala/org/locationtech/geomesa/stream/datastore:sources"
+    ],
+    deps = [
+        "//geomesa-stream/geomesa-stream-datastore/src/main/scala/org/locationtech/geomesa/stream/datastore:datastore" , 
+        "//geomesa-stream/geomesa-stream-datastore:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "datastore_test_discovery",
+    tests_from = [":datastore"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

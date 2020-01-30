@@ -1,0 +1,39 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "data",
+    srcs = [
+        "//geomesa-hbase/geomesa-hbase-datastore/src/main/scala/org/locationtech/geomesa/hbase/data:sources"
+    ],
+    deps = [
+        "//geomesa-hbase/geomesa-hbase-datastore/src/main/scala/org/locationtech/geomesa/hbase/coprocessor/aggregators:aggregators" , 
+        "//geomesa-hbase/geomesa-hbase-datastore/src/main/scala/org/locationtech/geomesa/hbase/coprocessor:coprocessor" , 
+        "//geomesa-hbase/geomesa-hbase-datastore/src/main/scala/org/locationtech/geomesa/hbase/data:data" , 
+        "//geomesa-hbase/geomesa-hbase-datastore/src/main/scala/org/locationtech/geomesa/hbase/filters:filters" , 
+        "//geomesa-hbase/geomesa-hbase-datastore/src/main/scala/org/locationtech/geomesa/hbase/utils:utils" , 
+        "//geomesa-hbase/geomesa-hbase-datastore/src/main/scala/org/locationtech/geomesa/hbase:hbase" , 
+        "//geomesa-hbase/geomesa-hbase-datastore:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "data",
+    srcs = [
+        "//geomesa-hbase/geomesa-hbase-datastore/src/main/scala/org/locationtech/geomesa/hbase/data:sources"
+    ],
+    deps = [
+        "//geomesa-hbase/geomesa-hbase-datastore:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

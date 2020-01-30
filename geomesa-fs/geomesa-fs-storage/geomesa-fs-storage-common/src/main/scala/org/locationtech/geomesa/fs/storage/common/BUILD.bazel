@@ -1,0 +1,37 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "common",
+    srcs = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-common/src/main/scala/org/locationtech/geomesa/fs/storage/common:sources"
+    ],
+    deps = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-common/src/main/scala/org/locationtech/geomesa/fs/storage/common/metadata:metadata" , 
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-common/src/main/scala/org/locationtech/geomesa/fs/storage/common/observer:observer" , 
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-common/src/main/scala/org/locationtech/geomesa/fs/storage/common/utils:utils" , 
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-common/src/main/scala/org/locationtech/geomesa/fs/storage/common:common" , 
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-common:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "common",
+    srcs = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-common/src/main/scala/org/locationtech/geomesa/fs/storage/common:sources"
+    ],
+    deps = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-common:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

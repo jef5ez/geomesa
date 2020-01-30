@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "cassandra",
+    srcs = [
+        "//geomesa-cassandra/geomesa-cassandra-datastore/src/main/scala/org/locationtech/geomesa/cassandra:sources"
+    ],
+    deps = [
+        "//geomesa-cassandra/geomesa-cassandra-datastore:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

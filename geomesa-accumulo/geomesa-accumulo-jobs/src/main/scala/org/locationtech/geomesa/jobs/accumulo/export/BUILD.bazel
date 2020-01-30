@@ -1,0 +1,19 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "export",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-jobs/src/main/scala/org/locationtech/geomesa/jobs/accumulo/export:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-jobs/src/main/scala/org/locationtech/geomesa/jobs/accumulo:accumulo" , 
+        "//geomesa-accumulo/geomesa-accumulo-jobs/src/main/scala/org/locationtech/geomesa/jobs/mapreduce:mapreduce" , 
+        "//geomesa-accumulo/geomesa-accumulo-jobs:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

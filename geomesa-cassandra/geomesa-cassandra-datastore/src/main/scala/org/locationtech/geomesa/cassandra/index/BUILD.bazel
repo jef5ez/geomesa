@@ -1,0 +1,35 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "index",
+    srcs = [
+        "//geomesa-cassandra/geomesa-cassandra-datastore/src/main/scala/org/locationtech/geomesa/cassandra/index:sources"
+    ],
+    deps = [
+        "//geomesa-cassandra/geomesa-cassandra-datastore/src/main/scala/org/locationtech/geomesa/cassandra/index:index" , 
+        "//geomesa-cassandra/geomesa-cassandra-datastore/src/main/scala/org/locationtech/geomesa/cassandra:cassandra" , 
+        "//geomesa-cassandra/geomesa-cassandra-datastore:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "index",
+    srcs = [
+        "//geomesa-cassandra/geomesa-cassandra-datastore/src/main/scala/org/locationtech/geomesa/cassandra/index:sources"
+    ],
+    deps = [
+        "//geomesa-cassandra/geomesa-cassandra-datastore:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

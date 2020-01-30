@@ -1,0 +1,4 @@
+
+sources(
+    visibility = ["//geomesa-spark/geomesa-spark-core/src/main/scala/org:__pkg__"]
+)

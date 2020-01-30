@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "parquet",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-parquet/src/test/scala/org/locationtech/geomesa/convert/parquet:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-parquet/src/main/scala/org/locationtech/geomesa/convert/parquet:parquet" , 
+        "//geomesa-convert/geomesa-convert-parquet:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "parquet_test_discovery",
+    tests_from = [":parquet"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

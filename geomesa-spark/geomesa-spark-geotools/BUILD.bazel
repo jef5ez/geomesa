@@ -1,0 +1,48 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-gt/geomesa-gt-spark:main_dependencies",
+        "@org_apache_spark_spark_core_2_11",
+        "@org_apache_spark_spark_sql_2_11",
+        "@org_scala_lang_scala_library//:linkable"
+    ],
+)
+     
+
+
+java_library(
+    name = "tests_dependencies",
+    testonly = 1,
+    exports = [
+        "main_dependencies"
+    ],
+    runtime_deps = [
+        "@com_esotericsoftware_kryo_shaded//:linkable",
+        "@log4j_log4j//:linkable",
+        "@org_apache_avro_avro//:linkable",
+        "@org_apache_commons_commons_lang3//:linkable",
+        "@org_apache_hadoop_hadoop_annotations//:linkable",
+        "@org_apache_hadoop_hadoop_client//:linkable",
+        "@org_apache_hadoop_hadoop_common//:linkable",
+        "@org_apache_hadoop_hadoop_hdfs//:linkable",
+        "@org_apache_hadoop_hadoop_mapreduce_client_common//:linkable",
+        "@org_apache_hadoop_hadoop_mapreduce_client_core//:linkable",
+        "@org_apache_hadoop_hadoop_yarn_api//:linkable",
+        "@org_apache_hadoop_hadoop_yarn_common//:linkable",
+        "@org_apache_spark_spark_catalyst_2_11//:linkable",
+        "@org_apache_spark_spark_core_2_11//:linkable",
+        "@org_apache_spark_spark_sql_2_11//:linkable",
+        "@org_apache_zookeeper_zookeeper//:linkable",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_api//:linkable",
+        "@org_slf4j_slf4j_log4j12//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

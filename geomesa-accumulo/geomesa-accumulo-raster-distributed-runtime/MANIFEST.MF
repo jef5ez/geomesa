@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Implementation-Version: fixed.version-SNAPSHOT
+Implementation-Vendor-Id: org.locationtech.geomesa
+Implementation-ArtifactId: geomesa-accumulo-raster-distributed-runtime
+ _2.11
+

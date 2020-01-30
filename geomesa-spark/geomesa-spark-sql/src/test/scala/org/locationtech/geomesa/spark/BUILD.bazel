@@ -1,0 +1,54 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "spark",
+    srcs = [
+        "//geomesa-spark/geomesa-spark-sql/src/test/scala/org/locationtech/geomesa/spark:sources"
+    ],
+    deps = [
+        "//geomesa-spark/geomesa-spark-sql/src/main/scala/org/apache/spark/sql:sql" , 
+        "//geomesa-spark/geomesa-spark-sql/src/main/scala/org/locationtech/geomesa/spark/sql:sql" , 
+        "//geomesa-spark/geomesa-spark-sql/src/test/scala/org/locationtech/geomesa/spark:spark" , 
+        "//geomesa-spark/geomesa-spark-sql:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "spark_test_discovery",
+    tests_from = [":spark"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+
+java_library(
+    name = "spark",
+    srcs = [
+        "//geomesa-spark/geomesa-spark-sql/src/test/scala/org/locationtech/geomesa/spark:sources"
+    ],
+    deps = [
+        "//geomesa-spark/geomesa-spark-sql:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "spark_test_discovery",
+    tests_from = [":spark"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

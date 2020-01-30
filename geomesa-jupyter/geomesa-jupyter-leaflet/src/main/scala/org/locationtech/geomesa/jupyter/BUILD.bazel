@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "jupyter",
+    srcs = [
+        "//geomesa-jupyter/geomesa-jupyter-leaflet/src/main/scala/org/locationtech/geomesa/jupyter:sources"
+    ],
+    deps = [
+        "//geomesa-jupyter/geomesa-jupyter-leaflet:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

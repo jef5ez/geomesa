@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "io",
+    srcs = [
+        "//geomesa-utils/src/test/scala/org/locationtech/geomesa/utils/io:sources"
+    ],
+    deps = [
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/io:io" , 
+        "//geomesa-utils:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "io_test_discovery",
+    tests_from = [":io"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

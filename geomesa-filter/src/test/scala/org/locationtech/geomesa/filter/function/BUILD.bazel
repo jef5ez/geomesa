@@ -1,0 +1,29 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "function",
+    srcs = [
+        "//geomesa-filter/src/test/scala/org/locationtech/geomesa/filter/function:sources"
+    ],
+    deps = [
+        "//geomesa-filter/src/main/scala/org/locationtech/geomesa/filter/factory:factory" , 
+        "//geomesa-filter/src/main/scala/org/locationtech/geomesa/filter/function:function" , 
+        "//geomesa-filter/src/main/scala/org/locationtech/geomesa/filter:filter" , 
+        "//geomesa-filter:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "function_test_discovery",
+    tests_from = [":function"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

@@ -1,0 +1,39 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "splitter",
+    srcs = [
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/conf/splitter:sources"
+    ],
+    deps = [
+        "//geomesa-index-api/src/main/java/org/locationtech/geomesa/index/conf:conf" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/conf/splitter:splitter" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/index/attribute:attribute" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/index/id:id" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/index/z2:z2" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/index/z3:z3" , 
+        "//geomesa-index-api:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "splitter",
+    srcs = [
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/conf/splitter:sources"
+    ],
+    deps = [
+        "//geomesa-index-api:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

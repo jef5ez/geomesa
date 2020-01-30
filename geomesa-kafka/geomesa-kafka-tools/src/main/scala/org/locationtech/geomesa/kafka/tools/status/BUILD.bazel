@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "status",
+    srcs = [
+        "//geomesa-kafka/geomesa-kafka-tools/src/main/scala/org/locationtech/geomesa/kafka/tools/status:sources"
+    ],
+    deps = [
+        "//geomesa-kafka/geomesa-kafka-tools/src/main/scala/org/locationtech/geomesa/kafka/tools:tools" , 
+        "//geomesa-kafka/geomesa-kafka-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "status",
+    srcs = [
+        "//geomesa-kafka/geomesa-kafka-tools/src/main/scala/org/locationtech/geomesa/kafka/tools/status:sources"
+    ],
+    deps = [
+        "//geomesa-kafka/geomesa-kafka-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "function",
+    srcs = [
+        "//geomesa-filter/src/main/scala/org/locationtech/geomesa/filter/function:sources"
+    ],
+    deps = [
+        "//geomesa-filter:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

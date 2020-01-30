@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "query",
+    srcs = [
+        "//geomesa-geojson/geomesa-geojson-api/src/main/scala/org/locationtech/geomesa/geojson/query:sources"
+    ],
+    deps = [
+        "//geomesa-geojson/geomesa-geojson-api/src/main/scala/org/locationtech/geomesa/geojson/query:query" , 
+        "//geomesa-geojson/geomesa-geojson-api:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "query",
+    srcs = [
+        "//geomesa-geojson/geomesa-geojson-api/src/main/scala/org/locationtech/geomesa/geojson/query:sources"
+    ],
+    deps = [
+        "//geomesa-geojson/geomesa-geojson-api:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

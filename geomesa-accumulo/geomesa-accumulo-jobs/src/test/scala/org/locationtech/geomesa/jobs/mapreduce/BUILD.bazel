@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "mapreduce",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-jobs/src/test/scala/org/locationtech/geomesa/jobs/mapreduce:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-jobs/src/main/scala/org/locationtech/geomesa/jobs/mapreduce:mapreduce" , 
+        "//geomesa-accumulo/geomesa-accumulo-jobs:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "mapreduce_test_discovery",
+    tests_from = [":mapreduce"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

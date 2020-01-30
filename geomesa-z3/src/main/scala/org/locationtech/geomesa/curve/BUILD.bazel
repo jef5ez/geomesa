@@ -1,0 +1,20 @@
+load("@io_bazel_rules_scala//scala:scala.bzl", "scala_library")
+
+package(default_visibility = ["//visibility:public"])
+
+scala_library(
+
+    name = "curve",
+    srcs = [
+        "//geomesa-z3/src/main/scala/org/locationtech/geomesa/curve:sources"
+    ],
+    deps = [
+        "//geomesa-z3:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

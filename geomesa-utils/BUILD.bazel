@@ -1,0 +1,72 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-z3:main_dependencies",
+        "@com_clearspring_analytics_stream",
+        "@com_esotericsoftware_kryo_shaded//:linkable",
+        "@com_google_code_gson_gson",
+        "@com_google_guava_guava",
+        "@com_googlecode_efficient_java_matrix_library_core",
+        "@com_typesafe_config",
+        "@com_typesafe_scala_logging_scala_logging_2_11",
+        "@commons_codec_commons_codec",
+        "@commons_io_commons_io",
+        "@org_apache_commons_commons_compress",
+        "@org_apache_commons_commons_csv",
+        "@org_apache_commons_commons_pool2",
+        "@org_apache_commons_commons_text",
+        "@org_apache_hadoop_hadoop_common",
+        "@org_geotools_gt_cql",
+        "@org_geotools_gt_grid",
+        "@org_geotools_gt_main",
+        "@org_geotools_gt_metadata",
+        "@org_geotools_gt_opengis",
+        "@org_geotools_gt_referencing",
+        "@org_geotools_gt_shapefile",
+        "@org_locationtech_jts_jts_core",
+        "@org_locationtech_spatial4j_spatial4j",
+        "@org_parboiled_parboiled_scala_2_11",
+        "@org_scala_lang_modules_scala_parser_combinators_2_11",
+        "@org_scala_lang_modules_scala_xml_2_11",
+        "@org_scala_lang_scala_library//:linkable"
+    ],
+    runtime_deps = [
+        "//geomesa-utils/src/main/resources:resources"
+    ],
+)
+     
+
+
+java_library(
+    name = "tests_dependencies",
+    testonly = 1,
+    exports = [
+        "@log4j_log4j//:linkable",
+        "@org_slf4j_slf4j_log4j12//:linkable",
+        "@org_specs2_specs2_core_2_11",
+        "@org_specs2_specs2_junit_2_11",
+        "@org_specs2_specs2_mock_2_11",
+        "main_dependencies"
+    ],
+    runtime_deps = [
+        "//geomesa-utils/src/test/resources:resources",
+        "@com_esotericsoftware_kryo_shaded//:linkable",
+        "@log4j_log4j//:linkable",
+        "@org_apache_avro_avro//:linkable",
+        "@org_apache_commons_commons_lang3//:linkable",
+        "@org_apache_hadoop_hadoop_annotations//:linkable",
+        "@org_apache_hadoop_hadoop_common//:linkable",
+        "@org_apache_zookeeper_zookeeper//:linkable",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_api//:linkable",
+        "@org_slf4j_slf4j_log4j12//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

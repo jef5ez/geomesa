@@ -1,0 +1,28 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "export",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-tools/src/test/scala/org/locationtech/geomesa/accumulo/tools/export:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-tools/src/main/scala/org/locationtech/geomesa/accumulo/tools/export:export" , 
+        "//geomesa-accumulo/geomesa-accumulo-tools/src/main/scala/org/locationtech/geomesa/accumulo/tools:tools" , 
+        "//geomesa-accumulo/geomesa-accumulo-tools:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "export_test_discovery",
+    tests_from = [":export"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

@@ -1,0 +1,28 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "usage",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-datastore/src/test/scala/org/locationtech/geomesa/accumulo/data/stats/usage:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-datastore/src/main/scala/org/locationtech/geomesa/accumulo/audit:audit" , 
+        "//geomesa-accumulo/geomesa-accumulo-datastore/src/main/scala/org/locationtech/geomesa/accumulo/util:util" , 
+        "//geomesa-accumulo/geomesa-accumulo-datastore:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "usage_test_discovery",
+    tests_from = [":usage"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

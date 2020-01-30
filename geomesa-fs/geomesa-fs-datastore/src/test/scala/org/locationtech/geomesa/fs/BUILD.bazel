@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "fs",
+    srcs = [
+        "//geomesa-fs/geomesa-fs-datastore/src/test/scala/org/locationtech/geomesa/fs:sources"
+    ],
+    deps = [
+        "//geomesa-fs/geomesa-fs-datastore/src/main/scala/org/locationtech/geomesa/fs/data:data" , 
+        "//geomesa-fs/geomesa-fs-datastore:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "fs_test_discovery",
+    tests_from = [":fs"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

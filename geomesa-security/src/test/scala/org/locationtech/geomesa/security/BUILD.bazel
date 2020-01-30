@@ -1,0 +1,28 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "security",
+    srcs = [
+        "//geomesa-security/src/test/scala/org/locationtech/geomesa/security:sources"
+    ],
+    deps = [
+        "//geomesa-security/src/main/java/org/locationtech/geomesa/security:security" , 
+        "//geomesa-security/src/main/scala/org/locationtech/geomesa/security:security" , 
+        "//geomesa-security:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "security_test_discovery",
+    tests_from = [":security"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

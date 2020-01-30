@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "simplefeature",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-simplefeature/src/main/scala/org/locationtech/geomesa/convert2/simplefeature:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-simplefeature/src/main/scala/org/locationtech/geomesa/convert2/simplefeature:simplefeature" , 
+        "//geomesa-convert/geomesa-convert-simplefeature:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "simplefeature",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-simplefeature/src/main/scala/org/locationtech/geomesa/convert2/simplefeature:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-simplefeature:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "data",
+    srcs = [
+        "//geomesa-arrow/geomesa-arrow-datastore/src/main/scala/org/locationtech/geomesa/arrow/data:sources"
+    ],
+    deps = [
+        "//geomesa-arrow/geomesa-arrow-datastore/src/main/scala/org/locationtech/geomesa/arrow/data:data" , 
+        "//geomesa-arrow/geomesa-arrow-datastore:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "data",
+    srcs = [
+        "//geomesa-arrow/geomesa-arrow-datastore/src/main/scala/org/locationtech/geomesa/arrow/data:sources"
+    ],
+    deps = [
+        "//geomesa-arrow/geomesa-arrow-datastore:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "simplefeature",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-simplefeature/src/test/scala/org/locationtech/geomesa/convert2/simplefeature:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-simplefeature/src/main/scala/org/locationtech/geomesa/convert2/simplefeature:simplefeature" , 
+        "//geomesa-convert/geomesa-convert-simplefeature:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "simplefeature_test_discovery",
+    tests_from = [":simplefeature"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

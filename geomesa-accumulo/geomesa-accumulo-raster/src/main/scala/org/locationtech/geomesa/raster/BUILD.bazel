@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "raster",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-raster/src/main/scala/org/locationtech/geomesa/raster:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-raster:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

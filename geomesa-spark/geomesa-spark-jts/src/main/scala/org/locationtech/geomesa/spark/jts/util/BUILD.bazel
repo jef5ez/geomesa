@@ -1,0 +1,36 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "util",
+    srcs = [
+        "//geomesa-spark/geomesa-spark-jts/src/main/scala/org/locationtech/geomesa/spark/jts/util:sources"
+    ],
+    deps = [
+        "//geomesa-spark/geomesa-spark-jts/src/main/scala/org/apache/spark/sql/jts:jts" , 
+        "//geomesa-spark/geomesa-spark-jts/src/main/scala/org/locationtech/geomesa/spark/jts/encoders:encoders" , 
+        "//geomesa-spark/geomesa-spark-jts/src/main/scala/org/locationtech/geomesa/spark/jts/util:util" , 
+        "//geomesa-spark/geomesa-spark-jts:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "util",
+    srcs = [
+        "//geomesa-spark/geomesa-spark-jts/src/main/scala/org/locationtech/geomesa/spark/jts/util:sources"
+    ],
+    deps = [
+        "//geomesa-spark/geomesa-spark-jts:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

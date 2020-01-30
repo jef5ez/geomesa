@@ -1,0 +1,43 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "view",
+    srcs = [
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/view:sources"
+    ],
+    deps = [
+        "//geomesa-index-api/src/main/java/org/locationtech/geomesa/index/view:view" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/api:api" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/conf:conf" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/geoserver:geoserver" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/geotools:geotools" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/iterators:iterators" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/planning:planning" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/stats:stats" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/utils:utils" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/view:view" , 
+        "//geomesa-index-api:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "view",
+    srcs = [
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/view:sources"
+    ],
+    deps = [
+        "//geomesa-index-api:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

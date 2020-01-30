@@ -1,0 +1,35 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "accumulo",
+    srcs = [
+        "//geomesa-blobstore/geomesa-blobstore-accumulo/src/main/java/org/locationtech/geomesa/blob/accumulo:sources"
+    ],
+    deps = [
+        "//geomesa-blobstore/geomesa-blobstore-accumulo/src/main/java/org/locationtech/geomesa/blob/accumulo:accumulo" , 
+        "//geomesa-blobstore/geomesa-blobstore-accumulo/src/main/scala/org/locationtech/geomesa/blob/accumulo:accumulo" , 
+        "//geomesa-blobstore/geomesa-blobstore-accumulo:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "accumulo",
+    srcs = [
+        "//geomesa-blobstore/geomesa-blobstore-accumulo/src/main/java/org/locationtech/geomesa/blob/accumulo:sources"
+    ],
+    deps = [
+        "//geomesa-blobstore/geomesa-blobstore-accumulo:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

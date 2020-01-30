@@ -1,0 +1,28 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "ingest",
+    srcs = [
+        "//geomesa-fs/geomesa-fs-tools/src/test/scala/org/locationtech/geomesa/fs/tools/ingest:sources"
+    ],
+    deps = [
+        "//geomesa-fs/geomesa-fs-tools/src/main/scala/org/locationtech/geomesa/fs/tools/compact:compact" , 
+        "//geomesa-fs/geomesa-fs-tools/src/main/scala/org/locationtech/geomesa/fs/tools:tools" , 
+        "//geomesa-fs/geomesa-fs-tools:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "ingest_test_discovery",
+    tests_from = [":ingest"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

@@ -1,0 +1,36 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-accumulo/geomesa-accumulo-datastore:main_dependencies",
+        "//geomesa-accumulo/geomesa-accumulo-raster:main_dependencies",
+        "@org_geotools_gt_opengis",
+        "@org_scala_lang_scala_library//:linkable"
+    ],
+)
+     
+
+
+java_library(
+    name = "tests_dependencies",
+    testonly = 1,
+    exports = [
+        "main_dependencies"
+    ],
+    runtime_deps = [
+        "@com_esotericsoftware_kryo_shaded//:linkable",
+        "@log4j_log4j//:linkable",
+        "@org_apache_avro_avro//:linkable",
+        "@org_apache_commons_commons_lang3//:linkable",
+        "@org_apache_zookeeper_zookeeper//:linkable",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_api//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

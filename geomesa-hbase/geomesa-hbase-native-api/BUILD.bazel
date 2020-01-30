@@ -1,0 +1,58 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-hbase/geomesa-hbase-datastore:main_dependencies",
+        "//geomesa-native-api:main_dependencies",
+        "@org_apache_hbase_hbase_client",
+        "@org_scala_lang_scala_library//:linkable"
+    ],
+)
+     
+
+
+java_library(
+    name = "tests_dependencies",
+    testonly = 1,
+    exports = [
+        "@com_google_code_gson_gson",
+        "@com_google_guava_guava",
+        "@junit_junit",
+        "@org_apache_hbase_hbase_testing_util",
+        "main_dependencies"
+    ],
+    runtime_deps = [
+        "//geomesa-hbase/geomesa-hbase-native-api/src/test/resources:resources",
+        "@com_esotericsoftware_kryo_shaded//:linkable",
+        "@log4j_log4j//:linkable",
+        "@org_apache_avro_avro//:linkable",
+        "@org_apache_commons_commons_lang3//:linkable",
+        "@org_apache_hadoop_hadoop_annotations//:linkable",
+        "@org_apache_hadoop_hadoop_client//:linkable",
+        "@org_apache_hadoop_hadoop_common//:linkable",
+        "@org_apache_hadoop_hadoop_common_tests//:linkable",
+        "@org_apache_hadoop_hadoop_hdfs//:linkable",
+        "@org_apache_hadoop_hadoop_hdfs_tests//:linkable",
+        "@org_apache_hadoop_hadoop_mapreduce_client_common//:linkable",
+        "@org_apache_hadoop_hadoop_mapreduce_client_core//:linkable",
+        "@org_apache_hadoop_hadoop_yarn_api//:linkable",
+        "@org_apache_hadoop_hadoop_yarn_common//:linkable",
+        "@org_apache_hbase_hbase_client//:linkable",
+        "@org_apache_hbase_hbase_common//:linkable",
+        "@org_apache_hbase_hbase_common_tests//:linkable",
+        "@org_apache_hbase_hbase_protocol//:linkable",
+        "@org_apache_hbase_hbase_server//:linkable",
+        "@org_apache_hbase_hbase_server_tests//:linkable",
+        "@org_apache_zookeeper_zookeeper//:linkable",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_api//:linkable",
+        "@org_slf4j_slf4j_log4j12//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

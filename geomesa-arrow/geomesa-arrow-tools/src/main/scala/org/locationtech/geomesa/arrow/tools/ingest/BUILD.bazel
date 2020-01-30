@@ -1,0 +1,4 @@
+
+sources(
+    visibility = ["//geomesa-arrow/geomesa-arrow-tools/src/main/scala/org/locationtech/geomesa/arrow/tools:__pkg__"]
+)

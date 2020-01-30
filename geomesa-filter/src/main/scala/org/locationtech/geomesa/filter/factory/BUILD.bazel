@@ -1,0 +1,36 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "factory",
+    srcs = [
+        "//geomesa-filter/src/main/scala/org/locationtech/geomesa/filter/factory:sources"
+    ],
+    deps = [
+        "//geomesa-filter/src/main/scala/org/locationtech/geomesa/filter/expression:expression" , 
+        "//geomesa-filter/src/main/scala/org/locationtech/geomesa/filter/visitor:visitor" , 
+        "//geomesa-filter/src/main/scala/org/locationtech/geomesa/filter:filter" , 
+        "//geomesa-filter:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "factory",
+    srcs = [
+        "//geomesa-filter/src/main/scala/org/locationtech/geomesa/filter/factory:sources"
+    ],
+    deps = [
+        "//geomesa-filter:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

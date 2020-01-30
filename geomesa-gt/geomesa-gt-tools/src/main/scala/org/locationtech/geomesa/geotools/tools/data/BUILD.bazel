@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "data",
+    srcs = [
+        "//geomesa-gt/geomesa-gt-tools/src/main/scala/org/locationtech/geomesa/geotools/tools/data:sources"
+    ],
+    deps = [
+        "//geomesa-gt/geomesa-gt-tools/src/main/scala/org/locationtech/geomesa/geotools/tools:tools" , 
+        "//geomesa-gt/geomesa-gt-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "data",
+    srcs = [
+        "//geomesa-gt/geomesa-gt-tools/src/main/scala/org/locationtech/geomesa/geotools/tools/data:sources"
+    ],
+    deps = [
+        "//geomesa-gt/geomesa-gt-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

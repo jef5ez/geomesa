@@ -1,0 +1,32 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-features/geomesa-feature-all:main_dependencies",
+        "//geomesa-fs/geomesa-fs-datastore:main_dependencies",
+        "//geomesa-fs/geomesa-fs-gs-plugin:main_dependencies",
+        "//geomesa-fs/geomesa-fs-spark-runtime:main_dependencies",
+        "//geomesa-fs/geomesa-fs-spark:main_dependencies",
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-common:main_dependencies",
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-orc:main_dependencies",
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-parquet:main_dependencies",
+        "//geomesa-fs/geomesa-fs-tools:main_dependencies",
+        "//geomesa-process/geomesa-process-wps:main_dependencies",
+        "//geomesa-tools:main_dependencies",
+        "//geomesa-utils:main_dependencies",
+        "@com_clearspring_analytics_stream",
+        "@log4j_log4j//:linkable",
+        "@org_geotools_gt_opengis",
+        "@org_scala_lang_modules_scala_xml_2_11",
+        "@org_scala_lang_scala_compiler",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_log4j12//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

@@ -1,0 +1,57 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "utils",
+    srcs = [
+        "//geomesa-memory/geomesa-cqengine/src/test/scala/org/locationtech/geomesa/memory/cqengine/utils:sources"
+    ],
+    deps = [
+        "//geomesa-memory/geomesa-cqengine/src/main/java/org/locationtech/geomesa/memory/cqengine/index/param:param" , 
+        "//geomesa-memory/geomesa-cqengine/src/main/java/org/locationtech/geomesa/memory/cqengine/index:index" , 
+        "//geomesa-memory/geomesa-cqengine/src/main/java/org/locationtech/geomesa/memory/cqengine/query:query" , 
+        "//geomesa-memory/geomesa-cqengine/src/main/scala/org/locationtech/geomesa/memory/cqengine/utils:utils" , 
+        "//geomesa-memory/geomesa-cqengine/src/main/scala/org/locationtech/geomesa/memory/cqengine:cqengine" , 
+        "//geomesa-memory/geomesa-cqengine/src/test/scala/org/locationtech/geomesa/memory/cqengine/utils:utils" , 
+        "//geomesa-memory/geomesa-cqengine:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "utils_test_discovery",
+    tests_from = [":utils"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+
+java_library(
+    name = "utils",
+    srcs = [
+        "//geomesa-memory/geomesa-cqengine/src/test/scala/org/locationtech/geomesa/memory/cqengine/utils:sources"
+    ],
+    deps = [
+        "//geomesa-memory/geomesa-cqengine:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "utils_test_discovery",
+    tests_from = [":utils"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

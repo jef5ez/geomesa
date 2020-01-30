@@ -1,0 +1,35 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "mapreduce",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-jobs/src/main/java/org/locationtech/geomesa/jobs/interop/mapreduce:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-jobs/src/main/java/org/locationtech/geomesa/jobs/interop/mapreduce:mapreduce" , 
+        "//geomesa-accumulo/geomesa-accumulo-jobs/src/main/scala/org/locationtech/geomesa/jobs/mapreduce:mapreduce" , 
+        "//geomesa-accumulo/geomesa-accumulo-jobs:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "mapreduce",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-jobs/src/main/java/org/locationtech/geomesa/jobs/interop/mapreduce:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-jobs:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

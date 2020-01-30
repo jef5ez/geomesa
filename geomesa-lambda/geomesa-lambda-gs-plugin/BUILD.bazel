@@ -1,0 +1,38 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-lambda/geomesa-lambda-datastore:main_dependencies",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_api",
+        "@org_springframework_security_spring_security_core"
+    ],
+)
+     
+
+
+java_library(
+    name = "tests_dependencies",
+    testonly = 1,
+    exports = [
+        "main_dependencies"
+    ],
+    runtime_deps = [
+        "//geomesa-lambda/geomesa-lambda-gs-plugin/src/test/resources:resources",
+        "@com_esotericsoftware_kryo_shaded//:linkable",
+        "@log4j_log4j//:linkable",
+        "@org_apache_avro_avro//:linkable",
+        "@org_apache_commons_commons_lang3//:linkable",
+        "@org_apache_zookeeper_zookeeper//:linkable",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_api//:linkable",
+        "@org_springframework_security_spring_security_core//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

@@ -1,0 +1,36 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "index",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-jobs/src/main/scala/org/locationtech/geomesa/jobs/accumulo/index:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-jobs/src/main/scala/org/locationtech/geomesa/jobs/accumulo/index:index" , 
+        "//geomesa-accumulo/geomesa-accumulo-jobs/src/main/scala/org/locationtech/geomesa/jobs/accumulo:accumulo" , 
+        "//geomesa-accumulo/geomesa-accumulo-jobs/src/main/scala/org/locationtech/geomesa/jobs/mapreduce:mapreduce" , 
+        "//geomesa-accumulo/geomesa-accumulo-jobs:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "index",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-jobs/src/main/scala/org/locationtech/geomesa/jobs/accumulo/index:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-jobs:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

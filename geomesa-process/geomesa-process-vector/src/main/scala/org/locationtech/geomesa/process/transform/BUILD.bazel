@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "transform",
+    srcs = [
+        "//geomesa-process/geomesa-process-vector/src/main/scala/org/locationtech/geomesa/process/transform:sources"
+    ],
+    deps = [
+        "//geomesa-process/geomesa-process-vector/src/main/scala/org/locationtech/geomesa/process:process" , 
+        "//geomesa-process/geomesa-process-vector:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "transform",
+    srcs = [
+        "//geomesa-process/geomesa-process-vector/src/main/scala/org/locationtech/geomesa/process/transform:sources"
+    ],
+    deps = [
+        "//geomesa-process/geomesa-process-vector:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

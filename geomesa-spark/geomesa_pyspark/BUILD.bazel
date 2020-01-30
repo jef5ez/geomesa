@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "@org_scala_lang_scala_library//:linkable"
+    ],
+    runtime_deps = [
+        "//geomesa-spark/geomesa-spark-core:main_dependencies"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

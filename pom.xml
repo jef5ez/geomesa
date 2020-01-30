@@ -2217,6 +2217,7 @@
                     <!-- 3.4.4 was released 2018-11-01.  It requires Maven version >= 3.3.9. -->
                     <version>3.4.4</version>
                     <configuration>
+                        <recompileMode>incremental</recompileMode>
                         <dependencies>
                             <dependency>
                                 <groupId>org.scala-lang</groupId>

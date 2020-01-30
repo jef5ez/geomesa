@@ -1,0 +1,31 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-accumulo/geomesa-accumulo-datastore:main_dependencies",
+        "//geomesa-accumulo/geomesa-accumulo-distributed-runtime:main_dependencies",
+        "//geomesa-features/geomesa-feature-all:main_dependencies",
+        "//geomesa-lambda/geomesa-lambda-datastore:main_dependencies",
+        "//geomesa-lambda/geomesa-lambda-gs-plugin:main_dependencies",
+        "//geomesa-lambda/geomesa-lambda-tools:main_dependencies",
+        "//geomesa-process/geomesa-process-wps:main_dependencies",
+        "//geomesa-tools:main_dependencies",
+        "//geomesa-utils:main_dependencies",
+        "@com_clearspring_analytics_stream",
+        "@log4j_log4j//:linkable",
+        "@org_apache_curator_curator_recipes",
+        "@org_geotools_gt_main",
+        "@org_geotools_gt_opengis",
+        "@org_scala_lang_modules_scala_xml_2_11",
+        "@org_scala_lang_scala_compiler",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_log4j12//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "config",
+    srcs = [
+        "//geomesa-metrics/src/main/scala/org/locationtech/geomesa/metrics/config:sources"
+    ],
+    deps = [
+        "//geomesa-metrics/src/main/scala/org/locationtech/geomesa/metrics/reporters:reporters" , 
+        "//geomesa-metrics:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "config",
+    srcs = [
+        "//geomesa-metrics/src/main/scala/org/locationtech/geomesa/metrics/config:sources"
+    ],
+    deps = [
+        "//geomesa-metrics:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

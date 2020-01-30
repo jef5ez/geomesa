@@ -1,0 +1,28 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "config",
+    srcs = [
+        "//geomesa-metrics/src/test/scala/org/locationtech/geomesa/metrics/config:sources"
+    ],
+    deps = [
+        "//geomesa-metrics/src/main/scala/org/locationtech/geomesa/metrics/config:config" , 
+        "//geomesa-metrics/src/main/scala/org/locationtech/geomesa/metrics/reporters:reporters" , 
+        "//geomesa-metrics:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "config_test_discovery",
+    tests_from = [":config"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

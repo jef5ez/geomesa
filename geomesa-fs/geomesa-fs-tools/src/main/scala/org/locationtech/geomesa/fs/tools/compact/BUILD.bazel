@@ -1,0 +1,36 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "compact",
+    srcs = [
+        "//geomesa-fs/geomesa-fs-tools/src/main/scala/org/locationtech/geomesa/fs/tools/compact:sources"
+    ],
+    deps = [
+        "//geomesa-fs/geomesa-fs-tools/src/main/scala/org/locationtech/geomesa/fs/tools/compact:compact" , 
+        "//geomesa-fs/geomesa-fs-tools/src/main/scala/org/locationtech/geomesa/fs/tools/ingest:ingest" , 
+        "//geomesa-fs/geomesa-fs-tools/src/main/scala/org/locationtech/geomesa/fs/tools:tools" , 
+        "//geomesa-fs/geomesa-fs-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "compact",
+    srcs = [
+        "//geomesa-fs/geomesa-fs-tools/src/main/scala/org/locationtech/geomesa/fs/tools/compact:sources"
+    ],
+    deps = [
+        "//geomesa-fs/geomesa-fs-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

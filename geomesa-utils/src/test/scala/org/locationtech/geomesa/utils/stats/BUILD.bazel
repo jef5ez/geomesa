@@ -1,0 +1,56 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "stats",
+    srcs = [
+        "//geomesa-utils/src/test/scala/org/locationtech/geomesa/utils/stats:sources"
+    ],
+    deps = [
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/clearspring:clearspring" , 
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/geotools:geotools" , 
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/stats:stats" , 
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/text:text" , 
+        "//geomesa-utils/src/test/scala/org/locationtech/geomesa/utils/stats:stats" , 
+        "//geomesa-utils:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "stats_test_discovery",
+    tests_from = [":stats"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+
+java_library(
+    name = "stats",
+    srcs = [
+        "//geomesa-utils/src/test/scala/org/locationtech/geomesa/utils/stats:sources"
+    ],
+    deps = [
+        "//geomesa-utils:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "stats_test_discovery",
+    tests_from = [":stats"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

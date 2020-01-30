@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "index",
+    srcs = [
+        "//geomesa-index-api/src/test/scala/org/locationtech/geomesa/index/index:sources"
+    ],
+    deps = [
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/api:api" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/conf:conf" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/geotools:geotools" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/index/attribute:attribute" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/index/z2:z2" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/utils:utils" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index:index" , 
+        "//geomesa-index-api/src/test/scala/org/locationtech/geomesa/index:index" , 
+        "//geomesa-index-api:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "index_test_discovery",
+    tests_from = [":index"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

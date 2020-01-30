@@ -1,0 +1,55 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "avro",
+    srcs = [
+        "//geomesa-features/geomesa-feature-avro/src/test/scala/org/locationtech/geomesa/features/avro:sources"
+    ],
+    deps = [
+        "//geomesa-features/geomesa-feature-avro/src/main/scala/org/locationtech/geomesa/features/avro/serialization:serialization" , 
+        "//geomesa-features/geomesa-feature-avro/src/main/scala/org/locationtech/geomesa/features/avro:avro" , 
+        "//geomesa-features/geomesa-feature-avro/src/test/scala/org/locationtech/geomesa/features/avro/serde:serde" , 
+        "//geomesa-features/geomesa-feature-avro/src/test/scala/org/locationtech/geomesa/features/avro:avro" , 
+        "//geomesa-features/geomesa-feature-avro:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "avro_test_discovery",
+    tests_from = [":avro"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+
+java_library(
+    name = "avro",
+    srcs = [
+        "//geomesa-features/geomesa-feature-avro/src/test/scala/org/locationtech/geomesa/features/avro:sources"
+    ],
+    deps = [
+        "//geomesa-features/geomesa-feature-avro:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "avro_test_discovery",
+    tests_from = [":avro"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "status",
+    srcs = [
+        "//geomesa-fs/geomesa-fs-tools/src/main/scala/org/locationtech/geomesa/fs/tools/status:sources"
+    ],
+    deps = [
+        "//geomesa-fs/geomesa-fs-tools/src/main/scala/org/locationtech/geomesa/fs/tools:tools" , 
+        "//geomesa-fs/geomesa-fs-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "status",
+    srcs = [
+        "//geomesa-fs/geomesa-fs-tools/src/main/scala/org/locationtech/geomesa/fs/tools/status:sources"
+    ],
+    deps = [
+        "//geomesa-fs/geomesa-fs-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

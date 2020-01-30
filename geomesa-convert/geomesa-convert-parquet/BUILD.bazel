@@ -1,0 +1,56 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-convert/geomesa-convert-avro:main_dependencies",
+        "//geomesa-convert/geomesa-convert-common:main_dependencies",
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-parquet:main_dependencies",
+        "@org_apache_avro_avro//:linkable",
+        "@org_apache_hadoop_hadoop_client",
+        "@org_apache_parquet_parquet_column",
+        "@org_apache_parquet_parquet_hadoop",
+        "@org_scala_lang_scala_library//:linkable"
+    ],
+    runtime_deps = [
+        "//geomesa-convert/geomesa-convert-parquet/src/main/resources:resources"
+    ],
+)
+     
+
+
+java_library(
+    name = "tests_dependencies",
+    testonly = 1,
+    exports = [
+        "@org_slf4j_slf4j_log4j12//:linkable",
+        "@org_specs2_specs2_core_2_11",
+        "@org_specs2_specs2_junit_2_11",
+        "main_dependencies"
+    ],
+    runtime_deps = [
+        "//geomesa-convert/geomesa-convert-parquet/src/test/resources:resources",
+        "@com_esotericsoftware_kryo_shaded//:linkable",
+        "@log4j_log4j//:linkable",
+        "@org_apache_avro_avro//:linkable",
+        "@org_apache_commons_commons_lang3//:linkable",
+        "@org_apache_hadoop_hadoop_annotations//:linkable",
+        "@org_apache_hadoop_hadoop_client//:linkable",
+        "@org_apache_hadoop_hadoop_common//:linkable",
+        "@org_apache_hadoop_hadoop_hdfs//:linkable",
+        "@org_apache_hadoop_hadoop_mapreduce_client_common//:linkable",
+        "@org_apache_hadoop_hadoop_mapreduce_client_core//:linkable",
+        "@org_apache_hadoop_hadoop_yarn_api//:linkable",
+        "@org_apache_hadoop_hadoop_yarn_common//:linkable",
+        "@org_apache_zookeeper_zookeeper//:linkable",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_api//:linkable",
+        "@org_slf4j_slf4j_log4j12//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

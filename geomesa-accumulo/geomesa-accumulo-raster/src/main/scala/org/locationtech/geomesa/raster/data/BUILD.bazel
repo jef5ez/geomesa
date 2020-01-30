@@ -1,0 +1,38 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "data",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-raster/src/main/scala/org/locationtech/geomesa/raster/data:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-raster/src/main/scala/org/locationtech/geomesa/raster/data:data" , 
+        "//geomesa-accumulo/geomesa-accumulo-raster/src/main/scala/org/locationtech/geomesa/raster/index:index" , 
+        "//geomesa-accumulo/geomesa-accumulo-raster/src/main/scala/org/locationtech/geomesa/raster/iterators:iterators" , 
+        "//geomesa-accumulo/geomesa-accumulo-raster/src/main/scala/org/locationtech/geomesa/raster/util:util" , 
+        "//geomesa-accumulo/geomesa-accumulo-raster/src/main/scala/org/locationtech/geomesa/raster:raster" , 
+        "//geomesa-accumulo/geomesa-accumulo-raster:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "data",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-raster/src/main/scala/org/locationtech/geomesa/raster/data:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-raster:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "core",
+    srcs = [
+        "//geomesa-web/geomesa-web-core/src/main/scala/org/locationtech/geomesa/web/core:sources"
+    ],
+    deps = [
+        "//geomesa-web/geomesa-web-core/src/main/scala/org/locationtech/geomesa/web/core:core" , 
+        "//geomesa-web/geomesa-web-core:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "core",
+    srcs = [
+        "//geomesa-web/geomesa-web-core/src/main/scala/org/locationtech/geomesa/web/core:sources"
+    ],
+    deps = [
+        "//geomesa-web/geomesa-web-core:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

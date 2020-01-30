@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "security",
+    srcs = [
+        "//geomesa-web/geomesa-web-data/src/main/scala/org/locationtech/geomesa/web/security:sources"
+    ],
+    deps = [
+        "//geomesa-web/geomesa-web-data:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

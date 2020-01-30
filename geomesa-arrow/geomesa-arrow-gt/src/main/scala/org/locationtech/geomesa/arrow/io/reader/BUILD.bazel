@@ -1,0 +1,36 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "reader",
+    srcs = [
+        "//geomesa-arrow/geomesa-arrow-gt/src/main/scala/org/locationtech/geomesa/arrow/io/reader:sources"
+    ],
+    deps = [
+        "//geomesa-arrow/geomesa-arrow-gt/src/main/scala/org/locationtech/geomesa/arrow/features:features" , 
+        "//geomesa-arrow/geomesa-arrow-gt/src/main/scala/org/locationtech/geomesa/arrow/io:io" , 
+        "//geomesa-arrow/geomesa-arrow-gt/src/main/scala/org/locationtech/geomesa/arrow/vector:vector" , 
+        "//geomesa-arrow/geomesa-arrow-gt:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "reader",
+    srcs = [
+        "//geomesa-arrow/geomesa-arrow-gt/src/main/scala/org/locationtech/geomesa/arrow/io/reader:sources"
+    ],
+    deps = [
+        "//geomesa-arrow/geomesa-arrow-gt:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

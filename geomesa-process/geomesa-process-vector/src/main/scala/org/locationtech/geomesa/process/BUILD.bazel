@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "process",
+    srcs = [
+        "//geomesa-process/geomesa-process-vector/src/main/scala/org/locationtech/geomesa/process:sources"
+    ],
+    deps = [
+        "//geomesa-process/geomesa-process-vector:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

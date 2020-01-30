@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "spark",
+    srcs = [
+        "//geomesa-kudu/geomesa-kudu-spark/src/main/scala/org/locationtech/geomesa/kudu/spark:sources"
+    ],
+    deps = [
+        "//geomesa-kudu/geomesa-kudu-spark/src/main/scala/org/locationtech/geomesa/kudu/spark:spark" , 
+        "//geomesa-kudu/geomesa-kudu-spark:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "spark",
+    srcs = [
+        "//geomesa-kudu/geomesa-kudu-spark/src/main/scala/org/locationtech/geomesa/kudu/spark:sources"
+    ],
+    deps = [
+        "//geomesa-kudu/geomesa-kudu-spark:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

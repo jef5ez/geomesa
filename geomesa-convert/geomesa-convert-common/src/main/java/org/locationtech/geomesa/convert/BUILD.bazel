@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "convert",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-common/src/main/java/org/locationtech/geomesa/convert:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-common/src/main/java/org/locationtech/geomesa/convert:convert" , 
+        "//geomesa-convert/geomesa-convert-common:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "convert",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-common/src/main/java/org/locationtech/geomesa/convert:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-common:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

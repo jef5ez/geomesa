@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-kudu/geomesa-kudu-datastore:main_dependencies",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_api",
+        "@org_springframework_security_spring_security_core"
+    ],
+)
+     
+
+
+java_library(
+    name = "tests_dependencies",
+    testonly = 1,
+    exports = [
+        "main_dependencies"
+    ],
+    runtime_deps = [
+        "@com_esotericsoftware_kryo_shaded//:linkable",
+        "@org_apache_commons_commons_lang3//:linkable",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_api//:linkable",
+        "@org_springframework_security_spring_security_core//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "servlet",
+    srcs = [
+        "//geomesa-geojson/geomesa-geojson-rest/src/test/scala/org/locationtech/geomesa/geojson/servlet:sources"
+    ],
+    deps = [
+        "//geomesa-geojson/geomesa-geojson-rest/src/main/scala/org/locationtech/geomesa/geojson/servlet:servlet" , 
+        "//geomesa-geojson/geomesa-geojson-rest:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "servlet_test_discovery",
+    tests_from = [":servlet"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

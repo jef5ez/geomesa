@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "servlet",
+    srcs = [
+        "//geomesa-geojson/geomesa-geojson-rest/src/main/scala/org/locationtech/geomesa/geojson/servlet:sources"
+    ],
+    deps = [
+        "//geomesa-geojson/geomesa-geojson-rest:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

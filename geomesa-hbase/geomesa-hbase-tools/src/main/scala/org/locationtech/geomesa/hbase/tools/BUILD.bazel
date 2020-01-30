@@ -1,0 +1,39 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "tools",
+    srcs = [
+        "//geomesa-hbase/geomesa-hbase-tools/src/main/scala/org/locationtech/geomesa/hbase/tools:sources"
+    ],
+    deps = [
+        "//geomesa-hbase/geomesa-hbase-tools/src/main/scala/org/locationtech/geomesa/hbase/tools/data:data" , 
+        "//geomesa-hbase/geomesa-hbase-tools/src/main/scala/org/locationtech/geomesa/hbase/tools/export:export" , 
+        "//geomesa-hbase/geomesa-hbase-tools/src/main/scala/org/locationtech/geomesa/hbase/tools/ingest:ingest" , 
+        "//geomesa-hbase/geomesa-hbase-tools/src/main/scala/org/locationtech/geomesa/hbase/tools/stats:stats" , 
+        "//geomesa-hbase/geomesa-hbase-tools/src/main/scala/org/locationtech/geomesa/hbase/tools/status:status" , 
+        "//geomesa-hbase/geomesa-hbase-tools/src/main/scala/org/locationtech/geomesa/hbase/tools:tools" , 
+        "//geomesa-hbase/geomesa-hbase-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "tools",
+    srcs = [
+        "//geomesa-hbase/geomesa-hbase-tools/src/main/scala/org/locationtech/geomesa/hbase/tools:sources"
+    ],
+    deps = [
+        "//geomesa-hbase/geomesa-hbase-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

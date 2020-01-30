@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "redis",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-redis-cache/src/main/scala/org/locationtech/geomesa/convert/redis:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-redis-cache:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

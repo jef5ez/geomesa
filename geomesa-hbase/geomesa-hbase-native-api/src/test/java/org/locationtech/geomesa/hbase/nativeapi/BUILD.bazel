@@ -1,0 +1,53 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "nativeapi",
+    srcs = [
+        "//geomesa-hbase/geomesa-hbase-native-api/src/test/java/org/locationtech/geomesa/hbase/nativeapi:sources"
+    ],
+    deps = [
+        "//geomesa-hbase/geomesa-hbase-native-api/src/main/scala/org/locationtech/geomesa/hbase/nativeapi:nativeapi" , 
+        "//geomesa-hbase/geomesa-hbase-native-api/src/test/java/org/locationtech/geomesa/hbase/nativeapi:nativeapi" , 
+        "//geomesa-hbase/geomesa-hbase-native-api:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "nativeapi_test_discovery",
+    tests_from = [":nativeapi"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+
+java_library(
+    name = "nativeapi",
+    srcs = [
+        "//geomesa-hbase/geomesa-hbase-native-api/src/test/java/org/locationtech/geomesa/hbase/nativeapi:sources"
+    ],
+    deps = [
+        "//geomesa-hbase/geomesa-hbase-native-api:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "nativeapi_test_discovery",
+    tests_from = [":nativeapi"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

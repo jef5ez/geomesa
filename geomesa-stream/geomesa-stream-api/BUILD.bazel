@@ -1,0 +1,30 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "@com_typesafe_config",
+        "@org_geotools_gt_main",
+        "@org_scala_lang_scala_library//:linkable"
+    ],
+)
+     
+
+
+java_library(
+    name = "tests_dependencies",
+    testonly = 1,
+    exports = [
+        "main_dependencies"
+    ],
+    runtime_deps = [
+        "@org_apache_commons_commons_lang3//:linkable",
+        "@org_scala_lang_scala_library//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

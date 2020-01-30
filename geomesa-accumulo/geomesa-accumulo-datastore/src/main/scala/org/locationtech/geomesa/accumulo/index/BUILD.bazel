@@ -1,0 +1,37 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "index",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-datastore/src/main/scala/org/locationtech/geomesa/accumulo/index:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-datastore/src/main/scala/org/locationtech/geomesa/accumulo/data:data" , 
+        "//geomesa-accumulo/geomesa-accumulo-datastore/src/main/scala/org/locationtech/geomesa/accumulo/index/legacy:legacy" , 
+        "//geomesa-accumulo/geomesa-accumulo-datastore/src/main/scala/org/locationtech/geomesa/accumulo/index:index" , 
+        "//geomesa-accumulo/geomesa-accumulo-datastore/src/main/scala/org/locationtech/geomesa/accumulo/iterators:iterators" , 
+        "//geomesa-accumulo/geomesa-accumulo-datastore:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "index",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-datastore/src/main/scala/org/locationtech/geomesa/accumulo/index:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-datastore:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

@@ -1,0 +1,38 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "@com_101tec_zkclient",
+        "@com_typesafe_scala_logging_scala_logging_2_11",
+        "@org_apache_kafka_kafka_2_11",
+        "@org_apache_kafka_kafka_clients",
+        "@org_scala_lang_scala_library//:linkable"
+    ],
+)
+     
+
+
+java_library(
+    name = "tests_dependencies",
+    testonly = 1,
+    exports = [
+        "@org_specs2_specs2_core_2_11",
+        "@org_specs2_specs2_junit_2_11",
+        "main_dependencies"
+    ],
+    runtime_deps = [
+        "@com_101tec_zkclient//:linkable",
+        "@org_apache_kafka_kafka_2_11//:linkable",
+        "@org_apache_kafka_kafka_clients//:linkable",
+        "@org_apache_zookeeper_zookeeper//:linkable",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_api//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

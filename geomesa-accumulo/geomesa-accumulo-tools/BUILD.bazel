@@ -1,0 +1,79 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-accumulo/geomesa-accumulo-datastore:main_dependencies",
+        "//geomesa-accumulo/geomesa-accumulo-jobs:main_dependencies",
+        "//geomesa-accumulo/geomesa-accumulo-raster:main_dependencies",
+        "//geomesa-convert/geomesa-convert-all:main_dependencies",
+        "//geomesa-filter:main_dependencies",
+        "//geomesa-security:main_dependencies",
+        "//geomesa-tools:main_dependencies",
+        "//geomesa-utils:main_dependencies",
+        "//geomesa-z3:main_dependencies",
+        "@com_beust_jcommander",
+        "@javax_media_jai_core",
+        "@org_apache_accumulo_accumulo_core",
+        "@org_apache_accumulo_accumulo_start",
+        "@org_apache_avro_avro//:linkable",
+        "@org_apache_commons_commons_csv",
+        "@org_apache_hadoop_hadoop_client",
+        "@org_apache_zookeeper_zookeeper//:linkable",
+        "@org_geotools_gt_epsg_wkt",
+        "@org_geotools_gt_geojson",
+        "@org_geotools_gt_xml",
+        "@org_json4s_json4s_native_2_11",
+        "@org_scala_lang_scala_compiler",
+        "@org_scala_lang_scala_library//:linkable"
+    ],
+    runtime_deps = [
+        "//geomesa-accumulo/geomesa-accumulo-tools/src/main/resources:resources"
+    ],
+)
+     
+
+
+java_library(
+    name = "tests_dependencies",
+    testonly = 1,
+    exports = [
+        "//geomesa-accumulo/geomesa-accumulo-datastore:main_dependencies",
+        "@org_apache_accumulo_accumulo_test",
+        "@org_specs2_specs2_core_2_11",
+        "@org_specs2_specs2_junit_2_11",
+        "main_dependencies"
+    ],
+    runtime_deps = [
+        "//geomesa-accumulo/geomesa-accumulo-tools/src/test/resources:resources",
+        "@com_esotericsoftware_kryo_shaded//:linkable",
+        "@javax_media_jai_core//:linkable",
+        "@log4j_log4j//:linkable",
+        "@org_apache_accumulo_accumulo_core//:linkable",
+        "@org_apache_accumulo_accumulo_start//:linkable",
+        "@org_apache_avro_avro//:linkable",
+        "@org_apache_commons_commons_lang3//:linkable",
+        "@org_apache_hadoop_hadoop_annotations//:linkable",
+        "@org_apache_hadoop_hadoop_client//:linkable",
+        "@org_apache_hadoop_hadoop_common//:linkable",
+        "@org_apache_hadoop_hadoop_common_tests//:linkable",
+        "@org_apache_hadoop_hadoop_distcp//:linkable",
+        "@org_apache_hadoop_hadoop_hdfs//:linkable",
+        "@org_apache_hadoop_hadoop_hdfs_tests//:linkable",
+        "@org_apache_hadoop_hadoop_mapreduce_client_common//:linkable",
+        "@org_apache_hadoop_hadoop_mapreduce_client_core//:linkable",
+        "@org_apache_hadoop_hadoop_yarn_api//:linkable",
+        "@org_apache_hadoop_hadoop_yarn_common//:linkable",
+        "@org_apache_zookeeper_zookeeper//:linkable",
+        "@org_scala_lang_scala_compiler//:linkable",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_api//:linkable",
+        "@org_slf4j_slf4j_log4j12//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

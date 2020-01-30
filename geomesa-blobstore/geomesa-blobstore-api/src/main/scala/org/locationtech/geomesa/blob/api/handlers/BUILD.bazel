@@ -1,0 +1,36 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "handlers",
+    srcs = [
+        "//geomesa-blobstore/geomesa-blobstore-api/src/main/scala/org/locationtech/geomesa/blob/api/handlers:sources"
+    ],
+    deps = [
+        "//geomesa-blobstore/geomesa-blobstore-api/src/main/java/org/locationtech/geomesa/blob/api:api" , 
+        "//geomesa-blobstore/geomesa-blobstore-api/src/main/scala/org/locationtech/geomesa/blob/api/handlers:handlers" , 
+        "//geomesa-blobstore/geomesa-blobstore-api/src/main/scala/org/locationtech/geomesa/blob/api:api" , 
+        "//geomesa-blobstore/geomesa-blobstore-api:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "handlers",
+    srcs = [
+        "//geomesa-blobstore/geomesa-blobstore-api/src/main/scala/org/locationtech/geomesa/blob/api/handlers:sources"
+    ],
+    deps = [
+        "//geomesa-blobstore/geomesa-blobstore-api:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

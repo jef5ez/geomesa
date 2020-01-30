@@ -1,0 +1,36 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "serialization",
+    srcs = [
+        "//geomesa-features/geomesa-feature-kryo/src/main/scala/org/locationtech/geomesa/features/kryo/serialization:sources"
+    ],
+    deps = [
+        "//geomesa-features/geomesa-feature-kryo/src/main/scala/org/locationtech/geomesa/features/kryo/impl:impl" , 
+        "//geomesa-features/geomesa-feature-kryo/src/main/scala/org/locationtech/geomesa/features/kryo/serialization:serialization" , 
+        "//geomesa-features/geomesa-feature-kryo/src/main/scala/org/locationtech/geomesa/features/kryo:kryo" , 
+        "//geomesa-features/geomesa-feature-kryo:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "serialization",
+    srcs = [
+        "//geomesa-features/geomesa-feature-kryo/src/main/scala/org/locationtech/geomesa/features/kryo/serialization:sources"
+    ],
+    deps = [
+        "//geomesa-features/geomesa-feature-kryo:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

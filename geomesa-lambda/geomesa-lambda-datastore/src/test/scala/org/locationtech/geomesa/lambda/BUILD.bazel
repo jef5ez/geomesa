@@ -1,0 +1,55 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "lambda",
+    srcs = [
+        "//geomesa-lambda/geomesa-lambda-datastore/src/test/scala/org/locationtech/geomesa/lambda:sources"
+    ],
+    deps = [
+        "//geomesa-lambda/geomesa-lambda-datastore/src/main/scala/org/locationtech/geomesa/lambda/data:data" , 
+        "//geomesa-lambda/geomesa-lambda-datastore/src/main/scala/org/locationtech/geomesa/lambda/stream:stream" , 
+        "//geomesa-lambda/geomesa-lambda-datastore/src/test/scala/org/locationtech/geomesa/lambda/stream/kafka:kafka" , 
+        "//geomesa-lambda/geomesa-lambda-datastore/src/test/scala/org/locationtech/geomesa/lambda:lambda" , 
+        "//geomesa-lambda/geomesa-lambda-datastore:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "lambda_test_discovery",
+    tests_from = [":lambda"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+
+java_library(
+    name = "lambda",
+    srcs = [
+        "//geomesa-lambda/geomesa-lambda-datastore/src/test/scala/org/locationtech/geomesa/lambda:sources"
+    ],
+    deps = [
+        "//geomesa-lambda/geomesa-lambda-datastore:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "lambda_test_discovery",
+    tests_from = [":lambda"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

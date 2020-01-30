@@ -1,0 +1,36 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "ingest",
+    srcs = [
+        "//geomesa-tools/src/main/scala/org/locationtech/geomesa/tools/ingest:sources"
+    ],
+    deps = [
+        "//geomesa-tools/src/main/scala/org/locationtech/geomesa/tools/ingest:ingest" , 
+        "//geomesa-tools/src/main/scala/org/locationtech/geomesa/tools/utils:utils" , 
+        "//geomesa-tools/src/main/scala/org/locationtech/geomesa/tools:tools" , 
+        "//geomesa-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "ingest",
+    srcs = [
+        "//geomesa-tools/src/main/scala/org/locationtech/geomesa/tools/ingest:sources"
+    ],
+    deps = [
+        "//geomesa-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

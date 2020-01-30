@@ -1,0 +1,36 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "avro",
+    srcs = [
+        "//geomesa-features/geomesa-feature-avro/src/main/scala/org/locationtech/geomesa/features/avro:sources"
+    ],
+    deps = [
+        "//geomesa-features/geomesa-feature-avro/src/main/scala/org/locationtech/geomesa/features/avro/serde:serde" , 
+        "//geomesa-features/geomesa-feature-avro/src/main/scala/org/locationtech/geomesa/features/avro/serialization:serialization" , 
+        "//geomesa-features/geomesa-feature-avro/src/main/scala/org/locationtech/geomesa/features/avro:avro" , 
+        "//geomesa-features/geomesa-feature-avro:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "avro",
+    srcs = [
+        "//geomesa-features/geomesa-feature-avro/src/main/scala/org/locationtech/geomesa/features/avro:sources"
+    ],
+    deps = [
+        "//geomesa-features/geomesa-feature-avro:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

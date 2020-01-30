@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "datastore",
+    srcs = [
+        "//geomesa-stream/geomesa-stream-datastore/src/main/scala/org/locationtech/geomesa/stream/datastore:sources"
+    ],
+    deps = [
+        "//geomesa-stream/geomesa-stream-datastore:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

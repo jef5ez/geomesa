@@ -1,0 +1,21 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-process/geomesa-process-wps:main_dependencies",
+        "//geomesa-redis/geomesa-redis-datastore:main_dependencies",
+        "//geomesa-redis/geomesa-redis-gs-plugin:main_dependencies",
+        "//geomesa-redis/geomesa-redis-tools:main_dependencies",
+        "//geomesa-tools:main_dependencies",
+        "@log4j_log4j//:linkable",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_log4j12//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

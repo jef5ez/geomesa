@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "osm",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-osm/src/main/scala/org/locationtech/geomesa/convert/osm:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-osm/src/main/scala/org/locationtech/geomesa/convert/osm:osm" , 
+        "//geomesa-convert/geomesa-convert-osm:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "osm",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-osm/src/main/scala/org/locationtech/geomesa/convert/osm:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-osm:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

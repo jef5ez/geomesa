@@ -1,0 +1,26 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-hbase/geomesa-hbase-datastore:main_dependencies",
+        "//geomesa-hbase/geomesa-hbase-distributed-runtime:main_dependencies",
+        "//geomesa-hbase/geomesa-hbase-gs-plugin:main_dependencies",
+        "//geomesa-hbase/geomesa-hbase-spark-runtime:main_dependencies",
+        "//geomesa-hbase/geomesa-hbase-spark:main_dependencies",
+        "//geomesa-hbase/geomesa-hbase-tools:main_dependencies",
+        "//geomesa-process/geomesa-process-wps:main_dependencies",
+        "//geomesa-tools:main_dependencies",
+        "@log4j_log4j//:linkable",
+        "@org_geotools_gt_opengis",
+        "@org_geotools_gt_process",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_log4j12//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

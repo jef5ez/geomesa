@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "jdbc",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-jdbc/src/main/scala/org/locationtech/geomesa/convert/jdbc:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-jdbc/src/main/scala/org/locationtech/geomesa/convert/jdbc:jdbc" , 
+        "//geomesa-convert/geomesa-convert-jdbc:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "jdbc",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-jdbc/src/main/scala/org/locationtech/geomesa/convert/jdbc:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-jdbc:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

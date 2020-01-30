@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-utils:main_dependencies",
+        "@org_geotools_gt_process_feature",
+        "@org_scala_lang_scala_library//:linkable"
+    ],
+)
+     
+
+
+java_library(
+    name = "tests_dependencies",
+    testonly = 1,
+    exports = [
+        "@org_specs2_specs2_core_2_11",
+        "@org_specs2_specs2_junit_2_11",
+        "main_dependencies"
+    ],
+    runtime_deps = [
+        "@com_esotericsoftware_kryo_shaded//:linkable",
+        "@org_apache_commons_commons_lang3//:linkable",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_api//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "jobs",
+    srcs = [
+        "//geomesa-jobs/src/test/scala/org/locationtech/geomesa/jobs:sources"
+    ],
+    deps = [
+        "//geomesa-jobs/src/main/scala/org/locationtech/geomesa/jobs:jobs" , 
+        "//geomesa-jobs:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "jobs_test_discovery",
+    tests_from = [":jobs"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

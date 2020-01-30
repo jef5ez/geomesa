@@ -1,0 +1,38 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "tools",
+    srcs = [
+        "//geomesa-kafka/geomesa-kafka-tools/src/main/scala/org/locationtech/geomesa/kafka/tools:sources"
+    ],
+    deps = [
+        "//geomesa-kafka/geomesa-kafka-tools/src/main/scala/org/locationtech/geomesa/kafka/tools/data:data" , 
+        "//geomesa-kafka/geomesa-kafka-tools/src/main/scala/org/locationtech/geomesa/kafka/tools/export:export" , 
+        "//geomesa-kafka/geomesa-kafka-tools/src/main/scala/org/locationtech/geomesa/kafka/tools/ingest:ingest" , 
+        "//geomesa-kafka/geomesa-kafka-tools/src/main/scala/org/locationtech/geomesa/kafka/tools/status:status" , 
+        "//geomesa-kafka/geomesa-kafka-tools/src/main/scala/org/locationtech/geomesa/kafka/tools:tools" , 
+        "//geomesa-kafka/geomesa-kafka-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "tools",
+    srcs = [
+        "//geomesa-kafka/geomesa-kafka-tools/src/main/scala/org/locationtech/geomesa/kafka/tools:sources"
+    ],
+    deps = [
+        "//geomesa-kafka/geomesa-kafka-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

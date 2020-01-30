@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "osm",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-osm/src/test/scala/org/locationtech/geomesa/convert/osm:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-osm/src/main/scala/org/locationtech/geomesa/convert/osm:osm" , 
+        "//geomesa-convert/geomesa-convert-osm:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "osm_test_discovery",
+    tests_from = [":osm"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

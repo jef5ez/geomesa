@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "json",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-json/src/main/scala/org/locationtech/geomesa/convert/json:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-json/src/main/scala/org/locationtech/geomesa/convert/json:json" , 
+        "//geomesa-convert/geomesa-convert-json:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "json",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-json/src/main/scala/org/locationtech/geomesa/convert/json:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-json:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

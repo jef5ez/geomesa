@@ -1,0 +1,19 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "agg=._commands_export",
+    srcs = [
+        "//geomesa-cassandra/geomesa-cassandra-tools/src/main/scala/org/locationtech/geomesa/cassandra/tools/commands:sources" , 
+        "//geomesa-cassandra/geomesa-cassandra-tools/src/main/scala/org/locationtech/geomesa/cassandra/tools/export:sources" , 
+        "//geomesa-cassandra/geomesa-cassandra-tools/src/main/scala/org/locationtech/geomesa/cassandra/tools:sources"
+    ],
+    deps = [
+        "//geomesa-cassandra/geomesa-cassandra-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

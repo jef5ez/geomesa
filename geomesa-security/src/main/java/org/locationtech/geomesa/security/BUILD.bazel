@@ -1,0 +1,35 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "security",
+    srcs = [
+        "//geomesa-security/src/main/java/org/locationtech/geomesa/security:sources"
+    ],
+    deps = [
+        "//geomesa-security/src/main/java/org/locationtech/geomesa/security:security" , 
+        "//geomesa-security/src/main/scala/org/locationtech/geomesa/security:security" , 
+        "//geomesa-security:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "security",
+    srcs = [
+        "//geomesa-security/src/main/java/org/locationtech/geomesa/security:sources"
+    ],
+    deps = [
+        "//geomesa-security:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

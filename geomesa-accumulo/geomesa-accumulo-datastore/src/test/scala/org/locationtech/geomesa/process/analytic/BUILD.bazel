@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "analytic",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-datastore/src/test/scala/org/locationtech/geomesa/process/analytic:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-datastore/src/test/scala/org/locationtech/geomesa/accumulo:accumulo" , 
+        "//geomesa-accumulo/geomesa-accumulo-datastore:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "analytic_test_discovery",
+    tests_from = [":analytic"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

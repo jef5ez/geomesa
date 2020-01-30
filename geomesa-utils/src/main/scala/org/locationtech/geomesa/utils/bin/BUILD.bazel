@@ -1,0 +1,38 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "bin",
+    srcs = [
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/bin:sources"
+    ],
+    deps = [
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/bin:bin" , 
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/collection:collection" , 
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/conversions:conversions" , 
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/geotools/sft:sft" , 
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/geotools:geotools" , 
+        "//geomesa-utils:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "bin",
+    srcs = [
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/bin:sources"
+    ],
+    deps = [
+        "//geomesa-utils:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

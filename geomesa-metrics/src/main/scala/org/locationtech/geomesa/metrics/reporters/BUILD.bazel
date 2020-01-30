@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "reporters",
+    srcs = [
+        "//geomesa-metrics/src/main/scala/org/locationtech/geomesa/metrics/reporters:sources"
+    ],
+    deps = [
+        "//geomesa-metrics:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

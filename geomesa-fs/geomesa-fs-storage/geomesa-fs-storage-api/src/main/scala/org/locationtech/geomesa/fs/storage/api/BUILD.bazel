@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "api",
+    srcs = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-api/src/main/scala/org/locationtech/geomesa/fs/storage/api:sources"
+    ],
+    deps = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-api:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

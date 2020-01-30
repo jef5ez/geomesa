@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "features",
+    srcs = [
+        "//geomesa-features/geomesa-feature-all/src/test/scala/org/locationtech/geomesa/features:sources"
+    ],
+    deps = [
+        "//geomesa-features/geomesa-feature-all/src/main/scala/org/locationtech/geomesa/features:features" , 
+        "//geomesa-features/geomesa-feature-all:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "features_test_discovery",
+    tests_from = [":features"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

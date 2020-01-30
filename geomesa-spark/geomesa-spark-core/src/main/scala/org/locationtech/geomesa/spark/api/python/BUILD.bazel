@@ -1,0 +1,20 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "python",
+    srcs = [
+        "//geomesa-spark/geomesa-spark-core/src/main/scala/org/locationtech/geomesa/spark/api/python:sources"
+    ],
+    deps = [
+        "//geomesa-spark/geomesa-spark-core/src/main/scala/org/apache/spark/geomesa/api/python:python" , 
+        "//geomesa-spark/geomesa-spark-core/src/main/scala/org/locationtech/geomesa/spark/api/java:root" , 
+        "//geomesa-spark/geomesa-spark-core/src/main/scala/org:agg=apache/spark/geomesa_locationtech/geomesa/spark" , 
+        "//geomesa-spark/geomesa-spark-core:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "core",
+    srcs = [
+        "//geomesa-web/geomesa-web-core/src/test/scala/org/locationtech/geomesa/web/core:sources"
+    ],
+    deps = [
+        "//geomesa-web/geomesa-web-core/src/main/scala/org/locationtech/geomesa/web/core:core" , 
+        "//geomesa-web/geomesa-web-core:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "core_test_discovery",
+    tests_from = [":core"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

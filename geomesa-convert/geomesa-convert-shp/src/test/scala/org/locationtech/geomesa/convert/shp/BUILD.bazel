@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "shp",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-shp/src/test/scala/org/locationtech/geomesa/convert/shp:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-shp/src/main/scala/org/locationtech/geomesa/convert/shp:shp" , 
+        "//geomesa-convert/geomesa-convert-shp:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "shp_test_discovery",
+    tests_from = [":shp"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

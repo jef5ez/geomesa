@@ -1,0 +1,30 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "uuid",
+    srcs = [
+        "//geomesa-utils/src/test/scala/org/locationtech/geomesa/utils/uuid:sources"
+    ],
+    deps = [
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/geotools:geotools" , 
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/index:index" , 
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/text:text" , 
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/uuid:uuid" , 
+        "//geomesa-utils:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "uuid_test_discovery",
+    tests_from = [":uuid"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

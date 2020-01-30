@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "spark",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-compute/src/test/scala/org/locationtech/geomesa/compute/spark:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-compute/src/main/scala/org/locationtech/geomesa/compute/spark:spark" , 
+        "//geomesa-accumulo/geomesa-accumulo-compute:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "spark_test_discovery",
+    tests_from = [":spark"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

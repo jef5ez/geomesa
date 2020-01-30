@@ -1,0 +1,18 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "interop",
+    srcs = [
+        "//geomesa-features/geomesa-feature-common/src/main/java/org/locationtech/geomesa/features/interop:sources"
+    ],
+    deps = [
+        "//geomesa-features/geomesa-feature-common/src/main/scala/org/locationtech/geomesa/features:features" , 
+        "//geomesa-features/geomesa-feature-common:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

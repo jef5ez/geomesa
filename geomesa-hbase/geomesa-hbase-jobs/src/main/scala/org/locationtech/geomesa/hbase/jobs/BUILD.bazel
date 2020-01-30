@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "jobs",
+    srcs = [
+        "//geomesa-hbase/geomesa-hbase-jobs/src/main/scala/org/locationtech/geomesa/hbase/jobs:sources"
+    ],
+    deps = [
+        "//geomesa-hbase/geomesa-hbase-jobs/src/main/scala/org/locationtech/geomesa/hbase/jobs:jobs" , 
+        "//geomesa-hbase/geomesa-hbase-jobs:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "jobs",
+    srcs = [
+        "//geomesa-hbase/geomesa-hbase-jobs/src/main/scala/org/locationtech/geomesa/hbase/jobs:sources"
+    ],
+    deps = [
+        "//geomesa-hbase/geomesa-hbase-jobs:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "interop",
+    srcs = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-common/src/main/java/org/locationtech/geomesa/fs/storage/common/interop:sources"
+    ],
+    deps = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-common/src/main/java/org/locationtech/geomesa/fs/storage/common/interop:interop" , 
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-common:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "interop",
+    srcs = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-common/src/main/java/org/locationtech/geomesa/fs/storage/common/interop:sources"
+    ],
+    deps = [
+        "//geomesa-fs/geomesa-fs-storage/geomesa-fs-storage-common:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

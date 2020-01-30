@@ -1,0 +1,37 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "tools",
+    srcs = [
+        "//geomesa-redis/geomesa-redis-tools/src/main/scala/org/locationtech/geomesa/redis/tools:sources"
+    ],
+    deps = [
+        "//geomesa-redis/geomesa-redis-tools/src/main/scala/org/locationtech/geomesa/redis/tools/export:export" , 
+        "//geomesa-redis/geomesa-redis-tools/src/main/scala/org/locationtech/geomesa/redis/tools/ingest:ingest" , 
+        "//geomesa-redis/geomesa-redis-tools/src/main/scala/org/locationtech/geomesa/redis/tools/schema:schema" , 
+        "//geomesa-redis/geomesa-redis-tools/src/main/scala/org/locationtech/geomesa/redis/tools/stats:stats" , 
+        "//geomesa-redis/geomesa-redis-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "tools",
+    srcs = [
+        "//geomesa-redis/geomesa-redis-tools/src/main/scala/org/locationtech/geomesa/redis/tools:sources"
+    ],
+    deps = [
+        "//geomesa-redis/geomesa-redis-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

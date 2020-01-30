@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "nativeapi",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-native-api/src/main/scala/org/locationtech/geomesa/accumulo/nativeapi:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-native-api:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

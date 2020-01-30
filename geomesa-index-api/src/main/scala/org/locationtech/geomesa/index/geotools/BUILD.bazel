@@ -1,0 +1,47 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "geotools",
+    srcs = [
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/geotools:sources"
+    ],
+    deps = [
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/api:api" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/audit:audit" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/conf/partition:partition" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/conf:conf" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/geoserver:geoserver" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/geotools:geotools" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/index/attribute:attribute" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/index/id:id" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/metadata:metadata" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/planning:planning" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/process:process" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/stats:stats" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/utils:utils" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index:index" , 
+        "//geomesa-index-api:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "geotools",
+    srcs = [
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/geotools:sources"
+    ],
+    deps = [
+        "//geomesa-index-api:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

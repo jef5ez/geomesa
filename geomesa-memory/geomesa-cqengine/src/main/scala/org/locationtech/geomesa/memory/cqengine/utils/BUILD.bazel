@@ -1,0 +1,36 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "utils",
+    srcs = [
+        "//geomesa-memory/geomesa-cqengine/src/main/scala/org/locationtech/geomesa/memory/cqengine/utils:sources"
+    ],
+    deps = [
+        "//geomesa-memory/geomesa-cqengine/src/main/java/org/locationtech/geomesa/memory/cqengine/attribute:attribute" , 
+        "//geomesa-memory/geomesa-cqengine/src/main/java/org/locationtech/geomesa/memory/cqengine/query:query" , 
+        "//geomesa-memory/geomesa-cqengine/src/main/scala/org/locationtech/geomesa/memory/cqengine/utils:utils" , 
+        "//geomesa-memory/geomesa-cqengine:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "utils",
+    srcs = [
+        "//geomesa-memory/geomesa-cqengine/src/main/scala/org/locationtech/geomesa/memory/cqengine/utils:sources"
+    ],
+    deps = [
+        "//geomesa-memory/geomesa-cqengine:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

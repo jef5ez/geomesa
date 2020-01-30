@@ -1,0 +1,53 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "confluent",
+    srcs = [
+        "//geomesa-kafka/geomesa-kafka-confluent/src/test/scala/org/locationtech/geomesa/kafka/confluent:sources"
+    ],
+    deps = [
+        "//geomesa-kafka/geomesa-kafka-confluent/src/main/scala/org/locationtech/geomesa/kafka/confluent:confluent" , 
+        "//geomesa-kafka/geomesa-kafka-confluent/src/test/scala/org/locationtech/geomesa/kafka/confluent:confluent" , 
+        "//geomesa-kafka/geomesa-kafka-confluent:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "confluent_test_discovery",
+    tests_from = [":confluent"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+
+java_library(
+    name = "confluent",
+    srcs = [
+        "//geomesa-kafka/geomesa-kafka-confluent/src/test/scala/org/locationtech/geomesa/kafka/confluent:sources"
+    ],
+    deps = [
+        "//geomesa-kafka/geomesa-kafka-confluent:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "confluent_test_discovery",
+    tests_from = [":confluent"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

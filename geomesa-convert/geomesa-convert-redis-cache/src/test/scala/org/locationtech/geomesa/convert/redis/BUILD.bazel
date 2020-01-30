@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "redis",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-redis-cache/src/test/scala/org/locationtech/geomesa/convert/redis:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-redis-cache/src/main/scala/org/locationtech/geomesa/convert/redis:redis" , 
+        "//geomesa-convert/geomesa-convert-redis-cache:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "redis_test_discovery",
+    tests_from = [":redis"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

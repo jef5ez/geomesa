@@ -1,0 +1,54 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "raster",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-raster/src/test/scala/org/locationtech/geomesa/raster:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-raster/src/main/scala/org/locationtech/geomesa/raster/data:data" , 
+        "//geomesa-accumulo/geomesa-accumulo-raster/src/main/scala/org/locationtech/geomesa/raster/index:index" , 
+        "//geomesa-accumulo/geomesa-accumulo-raster/src/main/scala/org/locationtech/geomesa/raster/util:util" , 
+        "//geomesa-accumulo/geomesa-accumulo-raster:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "raster_test_discovery",
+    tests_from = [":raster"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+
+java_library(
+    name = "raster",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-raster/src/test/scala/org/locationtech/geomesa/raster:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-raster:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "raster_test_discovery",
+    tests_from = [":raster"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

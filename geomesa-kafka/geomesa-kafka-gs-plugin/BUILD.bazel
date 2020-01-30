@@ -1,0 +1,16 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-kafka/geomesa-kafka-confluent:main_dependencies",
+        "//geomesa-kafka/geomesa-kafka-datastore:main_dependencies",
+        "@org_scala_lang_scala_library//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

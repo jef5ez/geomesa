@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "metrics",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-common/src/test/scala/org/locationtech/geomesa/convert2/metrics:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-common/src/main/scala/org/locationtech/geomesa/convert2/metrics:metrics" , 
+        "//geomesa-convert/geomesa-convert-common:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "metrics_test_discovery",
+    tests_from = [":metrics"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

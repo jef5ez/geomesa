@@ -1,0 +1,35 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "@org_apache_arrow_arrow_vector",
+        "@org_locationtech_jts_jts_core",
+        "@org_scala_lang_scala_library"
+    ],
+)
+     
+
+
+java_library(
+    name = "tests_dependencies",
+    testonly = 1,
+    exports = [
+        "@junit_junit",
+        "@org_slf4j_slf4j_log4j12//:linkable",
+        "main_dependencies"
+    ],
+    runtime_deps = [
+        "//geomesa-arrow/geomesa-arrow-jts/src/test/resources:resources",
+        "@log4j_log4j//:linkable",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_api//:linkable",
+        "@org_slf4j_slf4j_log4j12//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

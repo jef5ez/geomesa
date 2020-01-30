@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "parquet",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-parquet/src/main/scala/org/locationtech/geomesa/convert/parquet:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-parquet/src/main/scala/org/locationtech/geomesa/convert/parquet:parquet" , 
+        "//geomesa-convert/geomesa-convert-parquet:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "parquet",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-parquet/src/main/scala/org/locationtech/geomesa/convert/parquet:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-parquet:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

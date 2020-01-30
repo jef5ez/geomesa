@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "shp",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-shp/src/main/scala/org/locationtech/geomesa/convert/shp:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-shp/src/main/scala/org/locationtech/geomesa/convert/shp:shp" , 
+        "//geomesa-convert/geomesa-convert-shp:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "shp",
+    srcs = [
+        "//geomesa-convert/geomesa-convert-shp/src/main/scala/org/locationtech/geomesa/convert/shp:sources"
+    ],
+    deps = [
+        "//geomesa-convert/geomesa-convert-shp:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

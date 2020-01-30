@@ -1,0 +1,34 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "planning",
+    srcs = [
+        "//geomesa-index-api/src/test/scala/org/locationtech/geomesa/index/planning:sources"
+    ],
+    deps = [
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/api:api" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/conf:conf" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/geotools:geotools" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/index/z3:z3" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/planning:planning" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/stats:stats" , 
+        "//geomesa-index-api/src/main/scala/org/locationtech/geomesa/index/utils:utils" , 
+        "//geomesa-index-api/src/test/scala/org/locationtech/geomesa/index:index" , 
+        "//geomesa-index-api:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "planning_test_discovery",
+    tests_from = [":planning"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

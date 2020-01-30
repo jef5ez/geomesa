@@ -1,0 +1,53 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "interop",
+    srcs = [
+        "//geomesa-features/geomesa-feature-kryo/src/test/java/org/locationtech/geomesa/features/kyro/interop:sources"
+    ],
+    deps = [
+        "//geomesa-features/geomesa-feature-kryo/src/main/scala/org/locationtech/geomesa/features/kryo:kryo" , 
+        "//geomesa-features/geomesa-feature-kryo/src/test/java/org/locationtech/geomesa/features/kyro/interop:interop" , 
+        "//geomesa-features/geomesa-feature-kryo:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "interop_test_discovery",
+    tests_from = [":interop"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+
+java_library(
+    name = "interop",
+    srcs = [
+        "//geomesa-features/geomesa-feature-kryo/src/test/java/org/locationtech/geomesa/features/kyro/interop:sources"
+    ],
+    deps = [
+        "//geomesa-features/geomesa-feature-kryo:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "interop_test_discovery",
+    tests_from = [":interop"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

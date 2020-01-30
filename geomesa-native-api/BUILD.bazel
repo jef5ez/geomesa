@@ -1,0 +1,40 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "main_dependencies",
+    exports = [
+        "//geomesa-features/geomesa-feature-kryo:main_dependencies",
+        "//geomesa-index-api:main_dependencies",
+        "//geomesa-security:main_dependencies",
+        "@com_github_ben_manes_caffeine_caffeine",
+        "@org_apache_hadoop_hadoop_annotations",
+        "@org_geotools_gt_main",
+        "@org_geotools_gt_opengis",
+        "@org_scala_lang_scala_library//:linkable"
+    ],
+)
+     
+
+
+java_library(
+    name = "tests_dependencies",
+    testonly = 1,
+    exports = [
+        "@com_google_code_gson_gson",
+        "@junit_junit",
+        "main_dependencies"
+    ],
+    runtime_deps = [
+        "@com_esotericsoftware_kryo_shaded//:linkable",
+        "@org_apache_commons_commons_lang3//:linkable",
+        "@org_apache_hadoop_hadoop_annotations//:linkable",
+        "@org_scala_lang_scala_library//:linkable",
+        "@org_slf4j_slf4j_api//:linkable"
+    ],
+)
+     
+
+filegroup(
+    name = "coordinates",
+    srcs = ["MANIFEST.MF"],
+)

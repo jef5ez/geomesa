@@ -1,0 +1,4 @@
+
+sources(
+    visibility = ["//geomesa-cassandra/geomesa-cassandra-tools/src/main/scala/org/locationtech/geomesa/cassandra/tools:__pkg__"]
+)

@@ -1,0 +1,36 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "udf",
+    srcs = [
+        "//geomesa-spark/geomesa-spark-jts/src/main/scala/org/locationtech/geomesa/spark/jts/udf:sources"
+    ],
+    deps = [
+        "//geomesa-spark/geomesa-spark-jts/src/main/scala/org/locationtech/geomesa/spark/jts/udaf:udaf" , 
+        "//geomesa-spark/geomesa-spark-jts/src/main/scala/org/locationtech/geomesa/spark/jts/udf:udf" , 
+        "//geomesa-spark/geomesa-spark-jts/src/main/scala/org/locationtech/geomesa/spark/jts/util:util" , 
+        "//geomesa-spark/geomesa-spark-jts:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "udf",
+    srcs = [
+        "//geomesa-spark/geomesa-spark-jts/src/main/scala/org/locationtech/geomesa/spark/jts/udf:sources"
+    ],
+    deps = [
+        "//geomesa-spark/geomesa-spark-jts:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

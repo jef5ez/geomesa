@@ -1,0 +1,36 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "conf",
+    srcs = [
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/conf:sources"
+    ],
+    deps = [
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/conf:conf" , 
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/index:index" , 
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/text:text" , 
+        "//geomesa-utils:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+
+java_library(
+
+    name = "conf",
+    srcs = [
+        "//geomesa-utils/src/main/scala/org/locationtech/geomesa/utils/conf:sources"
+    ],
+    deps = [
+        "//geomesa-utils:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

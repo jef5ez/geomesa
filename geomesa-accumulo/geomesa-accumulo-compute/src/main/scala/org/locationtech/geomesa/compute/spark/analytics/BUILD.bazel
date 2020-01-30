@@ -1,0 +1,18 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "analytics",
+    srcs = [
+        "//geomesa-accumulo/geomesa-accumulo-compute/src/main/scala/org/locationtech/geomesa/compute/spark/analytics:sources"
+    ],
+    deps = [
+        "//geomesa-accumulo/geomesa-accumulo-compute/src/main/scala/org/locationtech/geomesa/compute/spark:spark" , 
+        "//geomesa-accumulo/geomesa-accumulo-compute:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()

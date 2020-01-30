@@ -1,0 +1,28 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+    name = "result",
+    srcs = [
+        "//geomesa-kudu/geomesa-kudu-datastore/src/test/scala/org/locationtech/geomesa/kudu/result:sources"
+    ],
+    deps = [
+        "//geomesa-kudu/geomesa-kudu-datastore/src/main/scala/org/locationtech/geomesa/kudu/result:result" , 
+        "//geomesa-kudu/geomesa-kudu-datastore/src/main/scala/org/locationtech/geomesa/kudu/schema:schema" , 
+        "//geomesa-kudu/geomesa-kudu-datastore:tests_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+        testonly = 1,
+)
+
+java_test_discovery(
+    name = "result_test_discovery",
+    tests_from = [":result"],
+    size = "small",
+    print_discovered_classes = True,
+    suffixes = ["Test", "Tests", "IT", "E2E"],
+    prefixes = ["Test", "Tests", "IT", "E2E"],
+    testonly = 1
+)
+
+sources()

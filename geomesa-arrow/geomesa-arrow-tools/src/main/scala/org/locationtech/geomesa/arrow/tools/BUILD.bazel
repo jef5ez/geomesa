@@ -1,0 +1,21 @@
+package(default_visibility = ["//visibility:public"])
+java_library(
+
+    name = "agg=._export_ingest_stats_status",
+    srcs = [
+        "//geomesa-arrow/geomesa-arrow-tools/src/main/scala/org/locationtech/geomesa/arrow/tools/export:sources" , 
+        "//geomesa-arrow/geomesa-arrow-tools/src/main/scala/org/locationtech/geomesa/arrow/tools/ingest:sources" , 
+        "//geomesa-arrow/geomesa-arrow-tools/src/main/scala/org/locationtech/geomesa/arrow/tools/stats:sources" , 
+        "//geomesa-arrow/geomesa-arrow-tools/src/main/scala/org/locationtech/geomesa/arrow/tools/status:sources" , 
+        "//geomesa-arrow/geomesa-arrow-tools/src/main/scala/org/locationtech/geomesa/arrow/tools:sources"
+    ],
+    deps = [
+        "//geomesa-arrow/geomesa-arrow-tools:main_dependencies"
+    ],
+    runtime_deps = [
+        
+    ],
+    
+)
+
+sources()
